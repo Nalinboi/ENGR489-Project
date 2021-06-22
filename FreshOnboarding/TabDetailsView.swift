@@ -27,7 +27,9 @@ struct TabDetailsView: View {
                 .multilineTextAlignment(.center)
 
         }
-        .foregroundColor(Color(#colorLiteral(red: 1, green: 0, blue: 0.5857753158, alpha: 1)))  // Not neccessary but its cool that it changes all text color
+        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+//        .foregroundColor(Color(#colorLiteral(red: 1, green: 0, blue: 0.5857753158, alpha: 1)))  // Not neccessary but its cool that it changes all text color
+        
         
     }
 }

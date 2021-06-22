@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-    @State private var isWalkthroughShowing = false
+        
     @Binding var tabSelection: Int
+    @Binding var isWalkthroughShowing: Bool
     
     var body: some View {
         NavigationView{
@@ -60,7 +60,7 @@ struct HomeView: View {
                     .font(.system(size : 18))
                     .multilineTextAlignment(.center)
                     
-                    Button(action: {self.tabSelection = 3}, label: {
+                    Button(action: {goWalkthrough()}, label: {
                         ZStack{
                             Image("walkthrough1")
                                 .resizable()
@@ -83,16 +83,35 @@ struct HomeView: View {
             }
         }
     }
+    func goWalkthrough(){
+        withAnimation {
+            isWalkthroughShowing.toggle()
+        }
+    }
 }
 
 struct NotesView: View {
+    @Binding var isUrgentHelpShowing: Bool
+
     var body: some View {
         NavigationView{
             VStack {
                 Text("Hello World")
             }
             .navigationTitle("Notes")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { emergencyHelp() }, label: {
+                        Text("Need help now?")
+                    })
+                }
+            }
             
+        }
+    }
+    func emergencyHelp(){
+        withAnimation {
+            isUrgentHelpShowing.toggle()
         }
     }
 }
@@ -108,7 +127,8 @@ struct NotesView: View {
 //}
 
 struct ExampleryView: View {
-    @State private var isWalkthroughShowing = false
+//    @State private var isWalkthroughShowing = false
+    @Binding var isWalkthroughShowing: Bool
     
     var body: some View {
         NavigationView{
@@ -148,7 +168,20 @@ struct ExampleryView: View {
                 
             }
             .navigationTitle("Resources")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { emergencyHelp() }, label: {
+                        Text("Need help now?")
+                    })
+                }
+            }
             
+        }
+    }
+    
+    func emergencyHelp(){
+        withAnimation {
+            isWalkthroughShowing.toggle()
         }
     }
     
@@ -159,24 +192,28 @@ struct ContentView: View {
     
     @State private var tabSelection = 2
     @State private var isWalkthroughShowing = false
+    @State private var isUrgentHelpShowing = false
     
     var body: some View {
         Group{
             if isWalkthroughShowing {
                 WalkthroughView(isWalkthroughShowing: $isWalkthroughShowing)
-            } else {
+            } else if isUrgentHelpShowing {
+                UrgentHelpView(isUrgentHelpShowing: $isUrgentHelpShowing)
+            }
+            else {
                 TabView(selection: $tabSelection) {  // Need to put this in a struct
-                    HomeView(tabSelection: $tabSelection)
+                    HomeView(tabSelection: $tabSelection, isWalkthroughShowing: $isWalkthroughShowing)
                         .tabItem {
                             Image(systemName: "house")
                             Text("Home")
                         }.tag(1)
-                    ExampleryView()
+                    ExampleryView(isWalkthroughShowing: $isWalkthroughShowing)
                         .tabItem {
                             Image(systemName: "heart")
                             Text("Resources")
                         }.tag(2)
-                    NotesView()
+                    NotesView(isUrgentHelpShowing: $isUrgentHelpShowing)
                         .tabItem {
                             Image(systemName: "square.and.pencil")
                             Text("Notes")

@@ -20,6 +20,7 @@
 		F48052782681F8F3003DC3E8 /* TabDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48052772681F8F3003DC3E8 /* TabDetailsView.swift */; };
 		F480527D2681FD7F003DC3E8 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480527C2681FD7F003DC3E8 /* ButtonsView.swift */; };
 		F480528226820BBE003DC3E8 /* AccountButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F480528126820BBE003DC3E8 /* AccountButtonView.swift */; };
+		F480528A2682AE39003DC3E8 /* UrgentHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48052892682AE39003DC3E8 /* UrgentHelpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		F48052772681F8F3003DC3E8 /* TabDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDetailsView.swift; sourceTree = "<group>"; };
 		F480527C2681FD7F003DC3E8 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		F480528126820BBE003DC3E8 /* AccountButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountButtonView.swift; sourceTree = "<group>"; };
+		F48052892682AE39003DC3E8 /* UrgentHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrgentHelpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				F48052772681F8F3003DC3E8 /* TabDetailsView.swift */,
 				F480527C2681FD7F003DC3E8 /* ButtonsView.swift */,
 				F480528126820BBE003DC3E8 /* AccountButtonView.swift */,
+				F48052892682AE39003DC3E8 /* UrgentHelpView.swift */,
 			);
 			path = FreshOnboarding;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			files = (
 				F480522A2681EC5F003DC3E8 /* ContentView.swift in Sources */,
 				F48052782681F8F3003DC3E8 /* TabDetailsView.swift in Sources */,
+				F480528A2682AE39003DC3E8 /* UrgentHelpView.swift in Sources */,
 				F48052282681EC5F003DC3E8 /* FreshOnboardingApp.swift in Sources */,
 				F48052602681F1A4003DC3E8 /* GradientView.swift in Sources */,
 				F48052562681EE29003DC3E8 /* WalkthroughView.swift in Sources */,
