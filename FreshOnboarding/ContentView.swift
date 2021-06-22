@@ -8,54 +8,79 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @State private var isWalkthroughShowing = false
     @Binding var tabSelection: Int
-
+    
     var body: some View {
         NavigationView{
             ZStack {
-                Color.red
+                // Color.red need to put a gradient in here instead
+                GradientView(isWalkthroughShowing: $isWalkthroughShowing)
                 VStack {
+                    Text("Clear Skies")
+                        .font(.system(size : 55, weight: .light))
+                        .foregroundColor(.blue)
+                    
+                    
                     Spacer()
                     HStack {
                         Button(action: {self.tabSelection = 2}, label: {
                             Text("Need further resources?")
-                                .fontWeight(.heavy)
+                                // .fontWeight(.light)
                                 .padding()
                                 .multilineTextAlignment(.center)
                                 .frame(width: 150, height: 100)
-                                .background(Color.black.opacity(0.27))
+                                .background(Color.blue.opacity(0.27))
                                 .cornerRadius(12)
                                 .padding(.horizontal)
                         })
                         Button(action: {self.tabSelection = 3}, label: {
                             Text("Need to take notes?")
-                                .fontWeight(.heavy)
+                                // .fontWeight(.heavy)
                                 .padding()
                                 .multilineTextAlignment(.center)
                                 .frame(width: 150, height: 100)
-                                .background(Color.black.opacity(0.27))
+                                .background(Color.blue.opacity(0.27))
                                 .cornerRadius(12)
                                 .padding(.horizontal)
                         })
                     }
-                    
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .padding()
                     
+                    Spacer()
+                    
+                    Group {
+                        Text("Are you ").bold() +
+                            Text("currently waiting ").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/) +
+                            Text("at \n the ").bold() +
+                            Text("Emergency Department?").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                    }
+                    .font(.system(size : 18))
+                    .multilineTextAlignment(.center)
+                    
                     Button(action: {self.tabSelection = 3}, label: {
-                        Text("Need to take notes?")
-                            .fontWeight(.heavy)
-                            .padding()
-                            .multilineTextAlignment(.center)
-                            .frame(width: 340, height: 200)
-                            .background(Color.black.opacity(0.27))
-                            .cornerRadius(12)
-                            .padding(.horizontal)
+                        ZStack{
+                            Image("walkthrough1")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 300)
+                                .opacity(0.33)
+                            Text("Emergency Department Walkthrough")
+                                .fontWeight(.heavy)
+                                .padding()
+                                .multilineTextAlignment(.center)
+                                .frame(width: 340, height: 200)
+                                .background(Color.blue.opacity(0.5))
+                                .cornerRadius(12)
+                                .padding(.horizontal)
+                        }
                     })
+                    Spacer()
                     Spacer()
                 }
             }
-            .navigationTitle("Clear Skies")
         }
     }
 }
@@ -66,9 +91,9 @@ struct NotesView: View {
             VStack {
                 Text("Hello World")
             }
+            .navigationTitle("Notes")
+            
         }
-        .navigationTitle("Notes")
-        
     }
 }
 
@@ -83,30 +108,48 @@ struct NotesView: View {
 //}
 
 struct ExampleryView: View {
-    @State var firstView = true
-    @State var appeared: Double = 0
+    @State private var isWalkthroughShowing = false
+    
     var body: some View {
-        VStack{
-            if firstView{
-                VStack{
-                    Button(action: {
-                        self.firstView = false
-                    }){
-                        Text("change view")
-                    }
+        NavigationView{
+            ZStack {
+                GradientView(isWalkthroughShowing: $isWalkthroughShowing)
+                
+                List {
+                
+                        Text("Mental Health Resources").font(.title2)
+                        ForEach(mhresources.indices, id: \.self) { index in
+                            VStack(alignment: .leading) {
+                                Label(mhresources[index].title, systemImage: "house").font(.headline)
+                                Divider()
+                                Label(mhresources[index].website, systemImage: "link")
+                            }
+                            .padding()
+                            .background(Color.secondary.opacity(0.25))
+                            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                        }
+                
+                    Spacer()
+                
+                        Text("Mindfulness tools").font(.title2)
+                        ForEach(mindfulnessTools.indices, id: \.self) { index in
+                            VStack(alignment: .leading) {
+                                Label(mindfulnessTools[index].title, systemImage: "house").font(.headline)
+                                Divider()
+                                Label(mindfulnessTools[index].website, systemImage: "link")
+                            }
+                            .padding()
+                            .background(Color.secondary.opacity(0.25))
+                            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                        }
+                
                 }
+                
+                
             }
-            else{
-                VStack{
-                    Text("Hello, World!")
-                }
-                .opacity(appeared)
-                .animation(Animation.easeInOut(duration: 3.0), value: appeared)
-                .onAppear {self.appeared = 1.0}
-                .onDisappear {self.appeared = 0.0}
-            }
+            .navigationTitle("Resources")
+            
         }
-
     }
     
 }
@@ -114,7 +157,7 @@ struct ExampleryView: View {
 
 struct ContentView: View {
     
-    @State private var tabSelection = 1
+    @State private var tabSelection = 2
     @State private var isWalkthroughShowing = false
     
     var body: some View {

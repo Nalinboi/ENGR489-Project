@@ -13,7 +13,7 @@ struct WalkthroughView: View {
      
     var body: some View {
         ZStack{
-            GradientView()
+            GradientView(isWalkthroughShowing: $isWalkthroughShowing)
             VStack {
                 PageTabView(selection: $selection)
                 ButtonsView(selection: $selection)

@@ -19,9 +19,13 @@ struct TabDetailsView: View {
             Text(tabs[index].title)
                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 .bold()
+                .frame(width:400)
             
             Text(tabs[index].text)
                 .padding()
+                .frame(width:400)
+                .multilineTextAlignment(.center)
+
         }
         .foregroundColor(Color(#colorLiteral(red: 1, green: 0, blue: 0.5857753158, alpha: 1)))  // Not neccessary but its cool that it changes all text color
         
@@ -31,7 +35,7 @@ struct TabDetailsView: View {
 struct TabDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            GradientView()
+            GradientView(isWalkthroughShowing: Binding.constant(true))
             TabDetailsView(index: 0)
         }
         

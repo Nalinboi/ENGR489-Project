@@ -24,7 +24,7 @@ struct PageTabView: View {
 struct PageTabView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            GradientView()
+            GradientView(isWalkthroughShowing: Binding.constant(true))
             PageTabView(selection: Binding.constant(0))
         }
         
