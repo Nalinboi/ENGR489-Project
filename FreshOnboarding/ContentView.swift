@@ -35,7 +35,7 @@ struct HomeView: View {
                                 .padding(.horizontal)
                         })
                         Button(action: {self.tabSelection = 3}, label: {
-                            Text("Need to take notes?")
+                            Text("Need help now?")
                                 // .fontWeight(.heavy)
                                 .padding()
                                 .multilineTextAlignment(.center)
@@ -61,11 +61,11 @@ struct HomeView: View {
                     
                     Button(action: {goWalkthrough()}, label: {
                         ZStack{
-                            Image("walkthrough1")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 300)
-                                .opacity(0.33)
+//                            Image("walkthrough1")
+//                                .resizable()
+//                                .aspectRatio(contentMode: .fit)
+//                                .frame(width: 300)
+//                                .opacity(0.33)
                             Text("Emergency Department Walkthrough")
                                 .fontWeight(.heavy)
                                 .padding()
@@ -120,7 +120,8 @@ struct NotesView: View {
     }
 }
 
-struct ResourcesView: View {    
+struct ResourcesView: View {
+    @Binding var isUrgentHelpShowing: Bool
     @Binding var isWalkthroughShowing: Bool
     @State var show = false
     
@@ -129,7 +130,7 @@ struct ResourcesView: View {
             ZStack {
                 GradientView(isWalkthroughShowing: $isWalkthroughShowing)
                 VStack{
-                    NavigationLink(destination: MHResourcesView(isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                    NavigationLink(destination: MHResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                         VStack {
                             Image(systemName: "heart")
                                 .renderingMode(.original)
@@ -144,7 +145,7 @@ struct ResourcesView: View {
                         .cornerRadius(12)
                         .padding(.vertical)
                     }
-                    NavigationLink(destination: MTResourcesView(isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                    NavigationLink(destination: MTResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                         VStack {
                             Image(systemName: "heart")
                                 .renderingMode(.original)
@@ -179,13 +180,14 @@ struct ResourcesView: View {
     
     func emergencyHelp(){
         withAnimation {
-            isWalkthroughShowing.toggle()
+            isUrgentHelpShowing.toggle()
         }
     }
 }
 
 
 struct MHResourcesView: View {
+    @Binding var isUrgentHelpShowing: Bool
     @Binding var isWalkthroughShowing: Bool
     @State var show = false
     
@@ -245,12 +247,13 @@ struct MHResourcesView: View {
     
     func emergencyHelp(){
         withAnimation {
-            isWalkthroughShowing.toggle()
+            isUrgentHelpShowing.toggle()
         }
     }
 }
 
 struct MTResourcesView: View {
+    @Binding var isUrgentHelpShowing: Bool
     @Binding var isWalkthroughShowing: Bool
     @State var show = false
     
@@ -309,7 +312,7 @@ struct MTResourcesView: View {
     
     func emergencyHelp(){
         withAnimation {
-            isWalkthroughShowing.toggle()
+            isUrgentHelpShowing.toggle()
         }
     }
 }
@@ -335,7 +338,7 @@ struct Menu : View {
 
 struct ContentView: View {
     
-    @State private var tabSelection = 2
+    @State private var tabSelection = 1
     @State private var isWalkthroughShowing = false
     @State private var isUrgentHelpShowing = false
     
@@ -353,7 +356,7 @@ struct ContentView: View {
                             Image(systemName: "house")
                             Text("Home")
                         }.tag(1)
-                    ResourcesView(isWalkthroughShowing: $isWalkthroughShowing)
+                    ResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing)
                         .tabItem {
                             Image(systemName: "heart")
                             Text("Resources")
