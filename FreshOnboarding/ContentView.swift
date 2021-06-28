@@ -15,7 +15,6 @@ struct HomeView: View {
     var body: some View {
         NavigationView{
             ZStack {
-                // Color.red need to put a gradient in here instead
                 GradientView(isWalkthroughShowing: $isWalkthroughShowing)
                 VStack {
                     Text("Clear Skies")
@@ -121,9 +120,7 @@ struct NotesView: View {
     }
 }
 
-struct ResourcesView: View {
-    
-//    @State private var isWalkthroughShowing = false
+struct ResourcesView: View {    
     @Binding var isWalkthroughShowing: Bool
     @State var show = false
     
@@ -131,53 +128,36 @@ struct ResourcesView: View {
         NavigationView{
             ZStack {
                 GradientView(isWalkthroughShowing: $isWalkthroughShowing)
-                
-                List {
-                    Text("Mental Health Resources").font(.title2).listRowBackground(Color.clear)
-                        ForEach(mhresources.indices, id: \.self) { index in
-                            VStack(alignment: .leading) {
-                                Button(action: { emergencyShow() }, label: {
-                                    Label(mhresources[index].title, systemImage: "house").font(.headline)
-                                    Divider()
-                                    Label(mhresources[index].website, systemImage: "link")
-                                })
-                            }
-                            .padding()
-                            .background(Color.secondary.opacity(0.25))
-                            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                        }.listRowBackground(Color.clear)
-                
-                        Spacer().listRowBackground(Color.clear)
-                
-                        Text("Mindfulness tools").font(.title2).listRowBackground(Color.clear)
-                        ForEach(mindfulnessTools.indices, id: \.self) { index in
-                            VStack(alignment: .leading) {
-                                Label(mindfulnessTools[index].title, systemImage: "house").font(.headline)
-                                Divider()
-                                Label(mindfulnessTools[index].website, systemImage: "link")
-                            }
-                            .padding()
-                            .background(Color.secondary.opacity(0.25))
-                            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                        }.listRowBackground(Color.clear)
-                
-                }.onAppear() {
-                    UITableView.appearance().backgroundColor = UIColor.clear
-                    UITableViewCell.appearance().backgroundColor = UIColor.clear
-                }
-                
-                if self.show{
-                    GeometryReader{ geometry in
-                        Menu().position(x: geometry.size.width / 2, y: geometry.size.height / 2)
-                    }.background(
-                        Color.black.opacity(0.65)
-                            .edgesIgnoringSafeArea(.all)
-                            .onTapGesture {
-                                withAnimation{
-                                    self.show.toggle()
-                                }
-                            }
-                    )
+                VStack{
+                    NavigationLink(destination: MHResourcesView(isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                        VStack {
+                            Image(systemName: "heart")
+                                .renderingMode(.original)
+                                .resizable()
+                                .frame(width: 120, height: 100)
+                            Text("Mental health resources")
+                        }
+                        .padding()
+                        .multilineTextAlignment(.center)
+                        .frame(width: 300, height: 200)
+                        .background(Color.blue.opacity(0.27))
+                        .cornerRadius(12)
+                        .padding(.vertical)
+                    }
+                    NavigationLink(destination: MTResourcesView(isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                        VStack {
+                            Image(systemName: "heart")
+                                .renderingMode(.original)
+                                .resizable()
+                                .frame(width: 120, height: 100)
+                            Text("Mindfullness tools")
+                        }
+                        .padding()
+                        .multilineTextAlignment(.center)
+                        .frame(width: 300, height: 200)
+                        .background(Color.blue.opacity(0.27))
+                        .cornerRadius(12)
+                        .padding(.vertical)                    }
                 }
             }
             .navigationTitle("Resources")
@@ -202,7 +182,136 @@ struct ResourcesView: View {
             isWalkthroughShowing.toggle()
         }
     }
+}
+
+
+struct MHResourcesView: View {
+    @Binding var isWalkthroughShowing: Bool
+    @State var show = false
     
+    var body: some View {
+        
+        ZStack {
+            GradientView(isWalkthroughShowing: $isWalkthroughShowing)
+            
+            List {
+                ForEach(mhresources.indices, id: \.self) { index in
+                    Button(action: { emergencyShow() }, label: {
+                        VStack(alignment: .leading) {
+                                Label(mhresources[index].title, systemImage: "house").font(.headline)
+                                Divider()
+                                Label(mhresources[index].website, systemImage: "link")
+                            }
+                        })
+                        .padding()
+                        .background(Color.secondary.opacity(0.25))
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                    }.listRowBackground(Color.clear)
+            }.onAppear() {
+                UITableView.appearance().backgroundColor = UIColor.clear
+                UITableViewCell.appearance().backgroundColor = UIColor.clear
+            }
+            
+            if self.show{
+                GeometryReader{ geometry in
+                    Menu().position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                }.background(
+                    Color.black.opacity(0.65)
+                        .edgesIgnoringSafeArea(.all)
+                        .onTapGesture {
+                            withAnimation{
+                                self.show.toggle()
+                            }
+                        }
+                )
+            }
+        
+        }
+        .navigationTitle("Mental Health")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: { emergencyHelp() }, label: {
+                    Text("Need help now?")
+                })
+            }
+        }
+    }
+    
+    func emergencyShow(){
+        withAnimation {
+            show.toggle()
+        }
+    }
+    
+    func emergencyHelp(){
+        withAnimation {
+            isWalkthroughShowing.toggle()
+        }
+    }
+}
+
+struct MTResourcesView: View {
+    @Binding var isWalkthroughShowing: Bool
+    @State var show = false
+    
+    var body: some View {
+        
+        ZStack {
+            GradientView(isWalkthroughShowing: $isWalkthroughShowing)
+            
+            List {
+                    ForEach(mindfulnessTools.indices, id: \.self) { index in
+                        VStack(alignment: .leading) {
+                            Label(mindfulnessTools[index].title, systemImage: "house").font(.headline)
+                            Divider()
+                            Label(mindfulnessTools[index].website, systemImage: "link")
+                        }
+                        .padding()
+                        .background(Color.secondary.opacity(0.25))
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                    }.listRowBackground(Color.clear)
+            
+            }.onAppear() {
+                UITableView.appearance().backgroundColor = UIColor.clear
+                UITableViewCell.appearance().backgroundColor = UIColor.clear
+            }
+            
+            if self.show{
+                GeometryReader{ geometry in
+                    Menu().position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                }.background(
+                    Color.black.opacity(0.65)
+                        .edgesIgnoringSafeArea(.all)
+                        .onTapGesture {
+                            withAnimation{
+                                self.show.toggle()
+                            }
+                        }
+                )
+            }
+        
+        }
+        .navigationTitle("Mindfulness Tools")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: { emergencyHelp() }, label: {
+                    Text("Need help now?")
+                })
+            }
+        }
+    }
+    
+    func emergencyShow(){
+        withAnimation {
+            show.toggle()
+        }
+    }
+    
+    func emergencyHelp(){
+        withAnimation {
+            isWalkthroughShowing.toggle()
+        }
+    }
 }
 
 struct Menu : View {
@@ -215,26 +324,6 @@ struct Menu : View {
                 }
             }
             
-            Button(action: {}) {
-                HStack(spacing: 12){
-                    Image("Profile").renderingMode(.original).resizable().frame(width: 30, height: 24).offset(x: -2)
-                    Text("Profile").foregroundColor(.black)
-                }
-            }
-            
-            Button(action: {}) {
-                HStack(spacing: 12){
-                    Image("Notification").renderingMode(.original).resizable().frame(width: 30, height: 28).offset(x: 2)
-                    Text("Notifications").foregroundColor(.black)
-                }
-            }
-            
-            Button(action: {}) {
-                HStack(spacing: 12){
-                    Image("Settings").renderingMode(.original).resizable().frame(width: 31, height: 26).offset(x: -2)
-                    Text("Settings").foregroundColor(.black)
-                }
-            }
             
         }.padding()
         .background(Color.white)
