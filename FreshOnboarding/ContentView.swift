@@ -92,21 +92,26 @@ struct HomeView: View {
 
 struct NotesView: View {
     @Binding var isUrgentHelpShowing: Bool
+    @Binding var isWalkthroughShowing: Bool
+
 
     var body: some View {
         NavigationView{
-            VStack {
-                Text("Hello World")
-            }
-            .navigationTitle("Notes")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: { emergencyHelp() }, label: {
-                        Text("Need help now?")
-                    })
+            ZStack {
+                GradientView(isWalkthroughShowing: $isWalkthroughShowing)
+
+                VStack {
+                    Text("Hello World")
+                }
+                .navigationTitle("Notes")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: { emergencyHelp() }, label: {
+                            Text("Need help now?")
+                        })
+                    }
                 }
             }
-            
         }
     }
     func emergencyHelp(){
@@ -116,19 +121,11 @@ struct NotesView: View {
     }
 }
 
-
-//NavigationLink(destination: BirgurView().navigationTitle("lmao")) {
-//    Text("Do Something")
-//}
-//struct BirgurView: View {
-//    var body: some View {
-//        Text("birger")
-//    }
-//}
-
-struct ExampleryView: View {
+struct ResourcesView: View {
+    
 //    @State private var isWalkthroughShowing = false
     @Binding var isWalkthroughShowing: Bool
+    @State var show = false
     
     var body: some View {
         NavigationView{
@@ -136,22 +133,23 @@ struct ExampleryView: View {
                 GradientView(isWalkthroughShowing: $isWalkthroughShowing)
                 
                 List {
-                
-                        Text("Mental Health Resources").font(.title2)
+                    Text("Mental Health Resources").font(.title2).listRowBackground(Color.clear)
                         ForEach(mhresources.indices, id: \.self) { index in
                             VStack(alignment: .leading) {
-                                Label(mhresources[index].title, systemImage: "house").font(.headline)
-                                Divider()
-                                Label(mhresources[index].website, systemImage: "link")
+                                Button(action: { emergencyShow() }, label: {
+                                    Label(mhresources[index].title, systemImage: "house").font(.headline)
+                                    Divider()
+                                    Label(mhresources[index].website, systemImage: "link")
+                                })
                             }
                             .padding()
                             .background(Color.secondary.opacity(0.25))
                             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                        }
+                        }.listRowBackground(Color.clear)
                 
-                    Spacer()
+                        Spacer().listRowBackground(Color.clear)
                 
-                        Text("Mindfulness tools").font(.title2)
+                        Text("Mindfulness tools").font(.title2).listRowBackground(Color.clear)
                         ForEach(mindfulnessTools.indices, id: \.self) { index in
                             VStack(alignment: .leading) {
                                 Label(mindfulnessTools[index].title, systemImage: "house").font(.headline)
@@ -161,11 +159,26 @@ struct ExampleryView: View {
                             .padding()
                             .background(Color.secondary.opacity(0.25))
                             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                        }
+                        }.listRowBackground(Color.clear)
                 
+                }.onAppear() {
+                    UITableView.appearance().backgroundColor = UIColor.clear
+                    UITableViewCell.appearance().backgroundColor = UIColor.clear
                 }
                 
-                
+                if self.show{
+                    GeometryReader{ geometry in
+                        Menu().position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                    }.background(
+                        Color.black.opacity(0.65)
+                            .edgesIgnoringSafeArea(.all)
+                            .onTapGesture {
+                                withAnimation{
+                                    self.show.toggle()
+                                }
+                            }
+                    )
+                }
             }
             .navigationTitle("Resources")
             .toolbar {
@@ -175,7 +188,12 @@ struct ExampleryView: View {
                     })
                 }
             }
-            
+        }
+    }
+    
+    func emergencyShow(){
+        withAnimation {
+            show.toggle()
         }
     }
     
@@ -186,6 +204,44 @@ struct ExampleryView: View {
     }
     
 }
+
+struct Menu : View {
+    var body : some View{
+        VStack(alignment: .leading, spacing: 15) {
+            Button(action: {}) {
+                HStack(spacing: 12){
+                    Image("Home").renderingMode(.original).resizable().frame(width: 30, height: 26)
+                    Text("Home").foregroundColor(.black)
+                }
+            }
+            
+            Button(action: {}) {
+                HStack(spacing: 12){
+                    Image("Profile").renderingMode(.original).resizable().frame(width: 30, height: 24).offset(x: -2)
+                    Text("Profile").foregroundColor(.black)
+                }
+            }
+            
+            Button(action: {}) {
+                HStack(spacing: 12){
+                    Image("Notification").renderingMode(.original).resizable().frame(width: 30, height: 28).offset(x: 2)
+                    Text("Notifications").foregroundColor(.black)
+                }
+            }
+            
+            Button(action: {}) {
+                HStack(spacing: 12){
+                    Image("Settings").renderingMode(.original).resizable().frame(width: 31, height: 26).offset(x: -2)
+                    Text("Settings").foregroundColor(.black)
+                }
+            }
+            
+        }.padding()
+        .background(Color.white)
+        .cornerRadius(15)
+    }
+}
+
 
 
 struct ContentView: View {
@@ -208,12 +264,12 @@ struct ContentView: View {
                             Image(systemName: "house")
                             Text("Home")
                         }.tag(1)
-                    ExampleryView(isWalkthroughShowing: $isWalkthroughShowing)
+                    ResourcesView(isWalkthroughShowing: $isWalkthroughShowing)
                         .tabItem {
                             Image(systemName: "heart")
                             Text("Resources")
                         }.tag(2)
-                    NotesView(isUrgentHelpShowing: $isUrgentHelpShowing)
+                    NotesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing)
                         .tabItem {
                             Image(systemName: "square.and.pencil")
                             Text("Notes")
