@@ -365,25 +365,24 @@ struct Menu : View {
         VStack(alignment: .leading, spacing: 15) {
             Button(action: {}) {
                 VStack(spacing: 12){
-                    Text(title).foregroundColor(.black)
+                    Text(title).foregroundColor(Color(#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)))
                         .font(.system(size : 40, weight: .heavy))
-                        .foregroundColor(.blue)
                         .multilineTextAlignment(.leading)
 
-                    Text(description).foregroundColor(.black)
+                    Text(description).foregroundColor(Color(#colorLiteral(red: 0.1264723241, green: 0.3532237411, blue: 0.5133422613, alpha: 1)))
                         .font(.system(size : 20, weight: .light))
-                        .foregroundColor(.blue)
                         .multilineTextAlignment(.leading)
-                    Text("Visit " + website).foregroundColor(.black)
+                    Text("Click to visit " + website).foregroundColor(Color(#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)))
                         .font(.system(size : 14, weight: .light))
-                        .foregroundColor(.blue)
+                        .underline()
                         .multilineTextAlignment(.leading)
                 }
             }
             
             
         }.padding()
-        .background(Color.blue)
+        .frame(width: 340, height: 300)
+        .background(Color(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)))
         .cornerRadius(15)
     }
 }

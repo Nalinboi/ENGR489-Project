@@ -15,7 +15,7 @@ let tabs = [
 ]
 
 let mhresources = [
-    Resource(title: "The LowDown", description: "The Lowdown is a popular local mental health application. It has a list of topics and testimonials to choose from. The Lowdown has an experienced group of counsellors who are available 24/7", website: "www.thelowdown.co.nz"),
+    Resource(title: "The Lowdown", description: "The Lowdown is a popular local mental health application. It has a list of topics and testimonials to choose from. The Lowdown has an experienced group of counsellors who are available 24/7", website: "www.thelowdown.co.nz"),
     Resource(title: "Aunty Dee", description: "Here includes a description for aunty dee", website: "www.auntydee.co.nz")
 ]
 
