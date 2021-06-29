@@ -25,7 +25,7 @@ struct GradientView: View {
                 LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)), Color(#colorLiteral(red: 0.6312997341, green: 0.9606612325, blue: 1, alpha: 1))]),
                                startPoint: .top, endPoint: .bottom).ignoresSafeArea()
             } else {
-                LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)), Color(#colorLiteral(red: 0.6312997341, green: 0.9606612325, blue: 1, alpha: 1))]),
+                LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.6312997341, green: 0.9606612325, blue: 1, alpha: 1)), .white]),
                                startPoint: .top, endPoint: .bottom).ignoresSafeArea()
             }
         }

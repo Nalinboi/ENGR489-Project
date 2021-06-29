@@ -11,10 +11,15 @@ struct TabDetailsView: View {
     let index: Int
     var body: some View {
         VStack {
+            Spacer()
+            Spacer()
+            
             Image(tabs[index].image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 350)
+                .frame(width: 210)
+            
+            Spacer()
             
             Text(tabs[index].title)
                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
@@ -25,6 +30,7 @@ struct TabDetailsView: View {
                 .padding()
                 .frame(width:400)
                 .multilineTextAlignment(.center)
+            Spacer()
 
         }
         .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)

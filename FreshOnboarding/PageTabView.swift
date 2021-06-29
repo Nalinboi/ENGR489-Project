@@ -15,8 +15,7 @@ struct PageTabView: View {
             ForEach(tabs.indices, id: \.self) { index in
                 TabDetailsView(index: index)
             }
-        }
-        .tabViewStyle(PageTabViewStyle())
+        }.tabViewStyle(PageTabViewStyle())
         
     }
 }
