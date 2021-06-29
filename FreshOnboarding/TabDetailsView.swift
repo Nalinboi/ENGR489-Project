@@ -14,7 +14,7 @@ struct TabDetailsView: View {
             Image(tabs[index].image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 560)
+                .frame(width: 350)
             
             Text(tabs[index].title)
                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
