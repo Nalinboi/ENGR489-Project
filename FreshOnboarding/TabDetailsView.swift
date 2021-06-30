@@ -14,7 +14,7 @@ struct TabDetailsView: View {
             Spacer()
             Spacer()
             
-            Image(tabs[index].image)
+            Image(systemName: tabs[index].image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 210)
