@@ -155,9 +155,9 @@ struct ResourcesView: View {
                     NavigationLink(destination: MHResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                         VStack {
                             Image(systemName: "heart")
-                                .renderingMode(.original)
                                 .resizable()
                                 .frame(width: 120, height: 100)
+                            //                                .renderingMode(.original)
                             Text("Mental health resources")
                         }
                         .padding()
@@ -170,9 +170,9 @@ struct ResourcesView: View {
                     NavigationLink(destination: MTResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                         VStack {
                             Image(systemName: "sun.min")
-                                .renderingMode(.original)
                                 .resizable()
                                 .frame(width: 120, height: 120)
+                                // .renderingMode(.original)
                             Text("Mindfullness tools")
                         }
                         .padding()
