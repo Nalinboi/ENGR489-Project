@@ -8,10 +8,12 @@
 import Foundation
 
 let tabs = [
-    Page(image: "bell", title: "Check in", text: "Firstly, make sure you have checked in. \n\nYou need to ensure that a nurse knows that you are waiting in the Emergency Department."),
-    Page(image: "clock", title: "Waiting room", text: "Once you have checked into reception, a nurse will find you shortly."),
-    Page(image: "person", title: "Triage nurse", text: "A nurse will see you shortly. Here They will triage you. \n\nThis means they will assess your level of severity, and ensure you are safe."),
-    Page(image: "bed.double", title: "Emergency Room", text: "You will be admitted into the emergency room where a doctor will treat you. \n\nThe doctor may also provide you with further information so please take notes of any information given.")
+    Page(image: "bell", title: "Check in", text: "When you first enter the Emergency Department (ED), make sure you\n check in at the reception.\n\nHere they will ask for basic \ndetails to put you on the ED patient list."),
+    Page(image: "clock", title: "Waiting room", text: "Once you have checked into reception, you will have to wait in the waiting room. \n\nHere, one of four things could happen. You may be triaged, assessed further, admitted, or even discharged home."),
+    Page(image: "exclamationmark.bubble", title: "How can we help?", text: "You and your Whānau might need to wait in the waiting room, cubical, corridor, Whānau room. \n\nPlease let the staff know if you need food/drinks/blankets, if things are getting worse, if you are thinking of leaving, medication, or any other help at all."),
+    Page(image: "person.3", title: "Who will see you?", text: "There are 3 different people that may see you. \n\nAn ED Doctor (who may refer you to the CRS), \nMental Health Liaison Nurse (on duty only at certain times), \nor Crisis Resolution Service (CRS) (only if you have been referred)"),
+    Page(image: "person", title: "Triage nurse", text: "The most likely case is that a triage nurse will see you shortly after checking in. \n\nHere they will triage you, which means they will assess your level of severity, and ensure you are safe, as well as ordering you inside a priority queue to be treated."),
+    Page(image: "bed.double", title: "Emergency Room", text: "An assessment by the triage nurse or a specialist can potentially lead to you being discharged home early. \n\n If not however, you may be admitted inside the Impatient or ED wards. These are also known as the emergency rooms, where you will be treated.")
 ]
 
 let mhresources = [
