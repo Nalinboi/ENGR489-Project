@@ -12,7 +12,7 @@ struct UrgentHelpView: View {
 
     var body: some View {
         ZStack{
-//            GradientView(isWalkthroughShowing: $isUrgentHelpShowing)
+            GradientView(isWalkthroughShowing: $isUrgentHelpShowing)
             VStack {
                 Spacer()
                 Text("Emergency Contacts")
