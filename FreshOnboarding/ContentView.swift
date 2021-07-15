@@ -15,7 +15,7 @@ struct HomeView: View {
     var body: some View {
         NavigationView{
             ZStack {
-                GradientView(isWalkthroughShowing: $isWalkthroughShowing)
+//                GradientView(isWalkthroughShowing: $isWalkthroughShowing)
                 VStack {
                     Text("Clear Skies")
                         .font(.system(size : 55, weight: .light))
@@ -104,7 +104,7 @@ struct NotesView: View {
     var body: some View {
         NavigationView{
             ZStack {
-                GradientView(isWalkthroughShowing: $isWalkthroughShowing)
+//                GradientView(isWalkthroughShowing: $isWalkthroughShowing)
 
                 VStack{
                     Form {
@@ -150,7 +150,7 @@ struct ResourcesView: View {
     var body: some View {
         NavigationView{
             ZStack {
-                GradientView(isWalkthroughShowing: $isWalkthroughShowing)
+//                GradientView(isWalkthroughShowing: $isWalkthroughShowing)
                 VStack{
                     NavigationLink(destination: MHResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                         VStack {
@@ -221,7 +221,7 @@ struct MHResourcesView: View {
     
     var body: some View {
         ZStack {
-            GradientView(isWalkthroughShowing: $isWalkthroughShowing)
+//            GradientView(isWalkthroughShowing: $isWalkthroughShowing)
             
             List {
                 ForEach(mhresources.indices, id: \.self) { index in
@@ -295,7 +295,7 @@ struct MTResourcesView: View {
     var body: some View {
         
         ZStack {
-            GradientView(isWalkthroughShowing: $isWalkthroughShowing)
+//            GradientView(isWalkthroughShowing: $isWalkthroughShowing)
             
             List {
                     ForEach(mindfulnessTools.indices, id: \.self) { index in
