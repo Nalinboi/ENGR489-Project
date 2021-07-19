@@ -51,31 +51,83 @@ struct HomeView: View {
                     Spacer()
                     
                     Group {
-                        Text("Are you ").bold() +
-                            Text("currently waiting ").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/) +
-                            Text("at \n the ").bold() +
-                            Text("Emergency Department?").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Text("Waiting in the ").bold() +
+                            Text("Emergency Department? ").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/) +
+                            Text("\nWe're ").bold() +
+                            Text("Here to help").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                     }
                     .font(.system(size : 18))
                     .multilineTextAlignment(.center)
                     
-                    Button(action: {goWalkthrough()}, label: {
-                        ZStack{
-//                            Image("walkthrough1")
-//                                .resizable()
-//                                .aspectRatio(contentMode: .fit)
-//                                .frame(width: 300)
-//                                .opacity(0.33)
-                            Text("Emergency Department Walkthrough")
-                                .fontWeight(.heavy)
-                                .padding()
-                                .multilineTextAlignment(.center)
-                                .frame(width: 340, height: 200)
-                                .background(Color.blue.opacity(0.5))
-                                .cornerRadius(12)
-                                .padding(.horizontal)
+                    VStack{
+                        HStack {
+                            Button(action: {self.tabSelection = 2}, label: {
+                                Text("Overview")
+                                    // .fontWeight(.light)
+                                    .padding()
+                                    .multilineTextAlignment(.center)
+                                    .frame(width: 150, height: 100)
+                                    .background(Color.blue.opacity(0.27))
+                                    .cornerRadius(12)
+                                    .padding(.horizontal)
+                            })
+                            Button(action: {emergencyHelp()}, label: {
+                                Text("People")
+                                    // .fontWeight(.heavy)
+                                    .padding()
+                                    .multilineTextAlignment(.center)
+                                    .frame(width: 150, height: 100)
+                                    .background(Color.blue.opacity(0.27))
+                                    .cornerRadius(12)
+                                    .padding(.horizontal)
+                            })
                         }
-                    })
+                        .foregroundColor(.black)
+                        .padding()
+                        HStack {
+                            Button(action: {self.tabSelection = 2}, label: {
+                                Text("Places")
+                                    // .fontWeight(.light)
+                                    .padding()
+                                    .multilineTextAlignment(.center)
+                                    .frame(width: 150, height: 100)
+                                    .background(Color.blue.opacity(0.27))
+                                    .cornerRadius(12)
+                                    .padding(.horizontal)
+                            })
+                            Button(action: {emergencyHelp()}, label: {
+                                Text("Procedures")
+                                    // .fontWeight(.heavy)
+                                    .padding()
+                                    .multilineTextAlignment(.center)
+                                    .frame(width: 150, height: 100)
+                                    .background(Color.blue.opacity(0.27))
+                                    .cornerRadius(12)
+                                    .padding(.horizontal)
+                            })
+                        }
+                        .foregroundColor(.black)
+                        .padding()
+                    }
+                    
+                    
+//                    Button(action: {goWalkthrough()}, label: {
+//                        ZStack{
+////                            Image("walkthrough1")
+////                                .resizable()
+////                                .aspectRatio(contentMode: .fit)
+////                                .frame(width: 300)
+////                                .opacity(0.33)
+//                            Text("Emergency Department Walkthrough")
+//                                .fontWeight(.heavy)
+//                                .padding()
+//                                .multilineTextAlignment(.center)
+//                                .frame(width: 340, height: 200)
+//                                .background(Color.blue.opacity(0.5))
+//                                .cornerRadius(12)
+//                                .padding(.horizontal)
+//                        }
+//                    })
                     Spacer()
                     Spacer()
                 }
@@ -152,39 +204,269 @@ struct ResourcesView: View {
             ZStack {
                 GradientView(isWalkthroughShowing: $isWalkthroughShowing)
                 VStack{
-                    NavigationLink(destination: MHResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
-                        VStack {
-                            Image(systemName: "heart")
-                                .resizable()
-                                .frame(width: 120, height: 100)
-                            //                                .renderingMode(.original)
-                            Text("Mental health resources")
+                    HStack{
+                        NavigationLink(destination: MHResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                            VStack {
+                                Image(systemName: "heart")
+                                    .resizable()
+                                    .frame(width: 60, height: 55)
+                                //                                .renderingMode(.original)
+                                Text("Mental health resources")
+                            }
+                            .padding()
+                            .multilineTextAlignment(.center)
+                            .frame(width: 175, height: 200)
+                            .background(Color.blue.opacity(0.27))
+                            .cornerRadius(12)
+                            .padding(.all, 2)
                         }
-                        .padding()
-                        .multilineTextAlignment(.center)
-                        .frame(width: 300, height: 200)
-                        .background(Color.blue.opacity(0.27))
-                        .cornerRadius(12)
-                        .padding(.vertical)
+                            NavigationLink(destination: MTResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                                VStack {
+                                    Image(systemName: "sun.min")
+                                        .resizable()
+                                        .frame(width: 60, height: 55)
+                                        // .renderingMode(.original)
+                                    Text("Mindfullness tools")
+                                }
+                                .padding()
+                                .multilineTextAlignment(.center)
+                                .frame(width: 175, height: 200)
+                                .background(Color.blue.opacity(0.27))
+                                .cornerRadius(12)
+                                .padding(.all, 2)
+                            }
+                        }
+                    HStack{
+                        NavigationLink(destination: MHResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                            VStack {
+                                Image(systemName: "heart")
+                                    .resizable()
+                                    .frame(width: 60, height: 55)
+                                //                                .renderingMode(.original)
+                                Text("Mental health resources")
+                            }
+                            .padding()
+                            .multilineTextAlignment(.center)
+                            .frame(width: 175, height: 200)
+                            .background(Color.blue.opacity(0.27))
+                            .cornerRadius(12)
+                            .padding(.all, 2)
+                        }
+                            NavigationLink(destination: MTResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                                VStack {
+                                    Image(systemName: "sun.min")
+                                        .resizable()
+                                        .frame(width: 60, height: 55)
+                                        // .renderingMode(.original)
+                                    Text("Mindfullness tools")
+                                }
+                                .padding()
+                                .multilineTextAlignment(.center)
+                                .frame(width: 175, height: 200)
+                                .background(Color.blue.opacity(0.27))
+                                .cornerRadius(12)
+                                .padding(.all, 2)
+                            }
+                        }
+                    HStack{
+                        NavigationLink(destination: MHResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                            VStack {
+                                Image(systemName: "heart")
+                                    .resizable()
+                                    .frame(width: 60, height: 55)
+                                //                                .renderingMode(.original)
+                                Text("Mental health resources")
+                            }
+                            .padding()
+                            .multilineTextAlignment(.center)
+                            .frame(width: 175, height: 200)
+                            .background(Color.blue.opacity(0.27))
+                            .cornerRadius(12)
+                            .padding(.all, 2)
+                        }
+                            NavigationLink(destination: MTResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                                VStack {
+                                    Image(systemName: "sun.min")
+                                        .resizable()
+                                        .frame(width: 60, height: 55)
+                                        // .renderingMode(.original)
+                                    Text("Mindfullness tools")
+                                }
+                                .padding()
+                                .multilineTextAlignment(.center)
+                                .frame(width: 175, height: 200)
+                                .background(Color.blue.opacity(0.27))
+                                .cornerRadius(12)
+                                .padding(.all, 2)
+                            }
+                        }
                     }
-                    NavigationLink(destination: MTResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
-                        VStack {
-                            Image(systemName: "sun.min")
-                                .resizable()
-                                .frame(width: 120, height: 120)
-                                // .renderingMode(.original)
-                            Text("Mindfullness tools")
-                        }
-                        .padding()
-                        .multilineTextAlignment(.center)
-                        .frame(width: 300, height: 200)
-                        .background(Color.blue.opacity(0.27))
-                        .cornerRadius(12)
-                        .padding(.vertical)                    }
-                }
-//                Menu(title: "The lowdown", description: "This is the desc", website: "www.thelowdown.com")
             }
             .navigationTitle("Resources")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { emergencyHelp() }, label: {
+                        Text("Need help now?")
+                    })
+                }
+            }
+        }
+    }
+    
+    func emergencyShow(){
+        withAnimation {
+            show.toggle()
+        }
+    }
+    
+    func emergencyHelp(){
+        withAnimation {
+            isUrgentHelpShowing.toggle()
+        }
+    }
+}
+
+struct ToolsView: View {
+    @Binding var isUrgentHelpShowing: Bool
+    @Binding var isWalkthroughShowing: Bool
+    @State var show = false
+    
+    var body: some View {
+        NavigationView{
+            ZStack {
+                GradientView(isWalkthroughShowing: $isWalkthroughShowing)
+                VStack{
+                    HStack{
+                        NavigationLink(destination: MHResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                            VStack {
+                                Image(systemName: "heart")
+                                    .resizable()
+                                    .frame(width: 60, height: 55)
+                                //                                .renderingMode(.original)
+                                Text("Mental health resources")
+                            }
+                            .padding()
+                            .multilineTextAlignment(.center)
+                            .frame(width: 150, height: 100)
+                            .background(Color.blue.opacity(0.27))
+                            .cornerRadius(12)
+                            .padding(.all)
+                        }
+                            NavigationLink(destination: MTResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                                VStack {
+                                    Image(systemName: "sun.min")
+                                        .resizable()
+                                        .frame(width: 60, height: 55)
+                                        // .renderingMode(.original)
+                                    Text("Mindfullness tools")
+                                }
+                                .padding()
+                                .multilineTextAlignment(.center)
+                                .frame(width: 150, height: 100)
+                                .background(Color.blue.opacity(0.27))
+                                .cornerRadius(12)
+                                .padding(.all)
+                            }
+                        }
+                    HStack{
+                        NavigationLink(destination: MHResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                            VStack {
+                                Image(systemName: "heart")
+                                    .resizable()
+                                    .frame(width: 60, height: 55)
+                                //                                .renderingMode(.original)
+                                Text("Mental health resources")
+                            }
+                            .padding()
+                            .multilineTextAlignment(.center)
+                            .frame(width: 150, height: 100)
+                            .background(Color.blue.opacity(0.27))
+                            .cornerRadius(12)
+                            .padding(.all)
+                        }
+                            NavigationLink(destination: MTResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                                VStack {
+                                    Image(systemName: "sun.min")
+                                        .resizable()
+                                        .frame(width: 60, height: 55)
+                                        // .renderingMode(.original)
+                                    Text("Mindfullness tools")
+                                }
+                                .padding()
+                                .multilineTextAlignment(.center)
+                                .frame(width: 150, height: 100)
+                                .background(Color.blue.opacity(0.27))
+                                .cornerRadius(12)
+                                .padding(.all)
+                            }
+                        }
+                    HStack{
+                        NavigationLink(destination: MHResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                            VStack {
+                                Image(systemName: "heart")
+                                    .resizable()
+                                    .frame(width: 60, height: 55)
+                                //                                .renderingMode(.original)
+                                Text("Mental health resources")
+                            }
+                            .padding()
+                            .multilineTextAlignment(.center)
+                            .frame(width: 150, height: 100)
+                            .background(Color.blue.opacity(0.27))
+                            .cornerRadius(12)
+                            .padding(.all)
+                        }
+                            NavigationLink(destination: MTResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                                VStack {
+                                    Image(systemName: "sun.min")
+                                        .resizable()
+                                        .frame(width: 60, height: 55)
+                                        // .renderingMode(.original)
+                                    Text("Mindfullness tools")
+                                }
+                                .padding()
+                                .multilineTextAlignment(.center)
+                                .frame(width: 150, height: 100)
+                                .background(Color.blue.opacity(0.27))
+                                .cornerRadius(12)
+                                .padding(.all)
+                            }
+                        }
+                    HStack{
+                        NavigationLink(destination: MHResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                            VStack {
+                                Image(systemName: "heart")
+                                    .resizable()
+                                    .frame(width: 60, height: 55)
+                                //                                .renderingMode(.original)
+                                Text("Mental health resources")
+                            }
+                            .padding()
+                            .multilineTextAlignment(.center)
+                            .frame(width: 150, height: 100)
+                            .background(Color.blue.opacity(0.27))
+                            .cornerRadius(12)
+                            .padding(.all)
+                        }
+                            NavigationLink(destination: MTResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                                VStack {
+                                    Image(systemName: "sun.min")
+                                        .resizable()
+                                        .frame(width: 60, height: 55)
+                                        // .renderingMode(.original)
+                                    Text("Mindfullness tools")
+                                }
+                                .padding()
+                                .multilineTextAlignment(.center)
+                                .frame(width: 150, height: 100)
+                                .background(Color.blue.opacity(0.27))
+                                .cornerRadius(12)
+                                .padding(.all)
+                            }
+                        }
+                    }
+            }
+            .navigationTitle("Tools")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: { emergencyHelp() }, label: {
@@ -258,6 +540,302 @@ struct MHResourcesView: View {
         
         }
         .navigationTitle("Mental Health")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: { emergencyHelp() }, label: {
+                    Text("Need help now?")
+                })
+            }
+        }
+    }
+    
+    func emergencyShow(title: String, description: String, website: String){
+        self.title = title
+        self.description = description
+        self.website = website
+        withAnimation {
+            show.toggle()
+        }
+    }
+    
+    func emergencyHelp(){
+        withAnimation {
+            isUrgentHelpShowing.toggle()
+        }
+    }
+}
+
+struct AnxietyView: View {
+    @Binding var isUrgentHelpShowing: Bool
+    @Binding var isWalkthroughShowing: Bool
+    @State var show = false
+    
+    @State var title = ""
+    @State var description = ""
+    @State var website = ""
+
+    
+    var body: some View {
+        ZStack {
+            GradientView(isWalkthroughShowing: $isWalkthroughShowing)
+            
+            List {
+                ForEach(anxResources.indices, id: \.self) { index in
+                    
+                    Button(action: { emergencyShow(title: anxResources[index].title, description: anxResources[index].description, website: anxResources[index].website) }, label: {
+                        VStack(alignment: .leading) {
+                                Label(anxResources[index].title, systemImage: "house").font(.headline)
+                                Divider()
+                                Label(anxResources[index].website, systemImage: "link")
+                            }
+                        })
+                        .padding()
+                        .background(Color.secondary.opacity(0.25))
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                    }.listRowBackground(Color.clear)
+            }.onAppear() {
+                UITableView.appearance().backgroundColor = UIColor.clear
+                UITableViewCell.appearance().backgroundColor = UIColor.clear
+            }
+            
+            if self.show{
+                GeometryReader{ geometry in
+                    Menu(title: title, description: description, website: website).position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                }.background(
+                    Color.black.opacity(0.65)
+                        .edgesIgnoringSafeArea(.all)
+                        .onTapGesture {
+                            withAnimation{
+                                self.show.toggle()
+                            }
+                        }
+                )
+            }
+        
+        }
+        .navigationTitle("Anxiety")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: { emergencyHelp() }, label: {
+                    Text("Need help now?")
+                })
+            }
+        }
+    }
+    
+    func emergencyShow(title: String, description: String, website: String){
+        self.title = title
+        self.description = description
+        self.website = website
+        withAnimation {
+            show.toggle()
+        }
+    }
+    
+    func emergencyHelp(){
+        withAnimation {
+            isUrgentHelpShowing.toggle()
+        }
+    }
+}
+
+struct DepressionView: View {
+    @Binding var isUrgentHelpShowing: Bool
+    @Binding var isWalkthroughShowing: Bool
+    @State var show = false
+    
+    @State var title = ""
+    @State var description = ""
+    @State var website = ""
+
+    
+    var body: some View {
+        ZStack {
+            GradientView(isWalkthroughShowing: $isWalkthroughShowing)
+            
+            List {
+                ForEach(depResources.indices, id: \.self) { index in
+                    
+                    Button(action: { emergencyShow(title: depResources[index].title, description: depResources[index].description, website: depResources[index].website) }, label: {
+                        VStack(alignment: .leading) {
+                                Label(depResources[index].title, systemImage: "house").font(.headline)
+                                Divider()
+                                Label(depResources[index].website, systemImage: "link")
+                            }
+                        })
+                        .padding()
+                        .background(Color.secondary.opacity(0.25))
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                    }.listRowBackground(Color.clear)
+            }.onAppear() {
+                UITableView.appearance().backgroundColor = UIColor.clear
+                UITableViewCell.appearance().backgroundColor = UIColor.clear
+            }
+            
+            if self.show{
+                GeometryReader{ geometry in
+                    Menu(title: title, description: description, website: website).position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                }.background(
+                    Color.black.opacity(0.65)
+                        .edgesIgnoringSafeArea(.all)
+                        .onTapGesture {
+                            withAnimation{
+                                self.show.toggle()
+                            }
+                        }
+                )
+            }
+        
+        }
+        .navigationTitle("Depression")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: { emergencyHelp() }, label: {
+                    Text("Need help now?")
+                })
+            }
+        }
+    }
+    
+    func emergencyShow(title: String, description: String, website: String){
+        self.title = title
+        self.description = description
+        self.website = website
+        withAnimation {
+            show.toggle()
+        }
+    }
+    
+    func emergencyHelp(){
+        withAnimation {
+            isUrgentHelpShowing.toggle()
+        }
+    }
+}
+
+struct BullyingView: View {
+    @Binding var isUrgentHelpShowing: Bool
+    @Binding var isWalkthroughShowing: Bool
+    @State var show = false
+    
+    @State var title = ""
+    @State var description = ""
+    @State var website = ""
+
+    
+    var body: some View {
+        ZStack {
+            GradientView(isWalkthroughShowing: $isWalkthroughShowing)
+            
+            List {
+                ForEach(bulResources.indices, id: \.self) { index in
+                    
+                    Button(action: { emergencyShow(title: bulResources[index].title, description: bulResources[index].description, website: bulResources[index].website) }, label: {
+                        VStack(alignment: .leading) {
+                                Label(bulResources[index].title, systemImage: "house").font(.headline)
+                                Divider()
+                                Label(bulResources[index].website, systemImage: "link")
+                            }
+                        })
+                        .padding()
+                        .background(Color.secondary.opacity(0.25))
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                    }.listRowBackground(Color.clear)
+            }.onAppear() {
+                UITableView.appearance().backgroundColor = UIColor.clear
+                UITableViewCell.appearance().backgroundColor = UIColor.clear
+            }
+            
+            if self.show{
+                GeometryReader{ geometry in
+                    Menu(title: title, description: description, website: website).position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                }.background(
+                    Color.black.opacity(0.65)
+                        .edgesIgnoringSafeArea(.all)
+                        .onTapGesture {
+                            withAnimation{
+                                self.show.toggle()
+                            }
+                        }
+                )
+            }
+        
+        }
+        .navigationTitle("Bullying")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: { emergencyHelp() }, label: {
+                    Text("Need help now?")
+                })
+            }
+        }
+    }
+    
+    func emergencyShow(title: String, description: String, website: String){
+        self.title = title
+        self.description = description
+        self.website = website
+        withAnimation {
+            show.toggle()
+        }
+    }
+    
+    func emergencyHelp(){
+        withAnimation {
+            isUrgentHelpShowing.toggle()
+        }
+    }
+}
+
+struct GriefView: View {
+    @Binding var isUrgentHelpShowing: Bool
+    @Binding var isWalkthroughShowing: Bool
+    @State var show = false
+    
+    @State var title = ""
+    @State var description = ""
+    @State var website = ""
+
+    
+    var body: some View {
+        ZStack {
+            GradientView(isWalkthroughShowing: $isWalkthroughShowing)
+            
+            List {
+                ForEach(griefResources.indices, id: \.self) { index in
+                    
+                    Button(action: { emergencyShow(title: griefResources[index].title, description: griefResources[index].description, website: griefResources[index].website) }, label: {
+                        VStack(alignment: .leading) {
+                                Label(griefResources[index].title, systemImage: "house").font(.headline)
+                                Divider()
+                                Label(griefResources[index].website, systemImage: "link")
+                            }
+                        })
+                        .padding()
+                        .background(Color.secondary.opacity(0.25))
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                    }.listRowBackground(Color.clear)
+            }.onAppear() {
+                UITableView.appearance().backgroundColor = UIColor.clear
+                UITableViewCell.appearance().backgroundColor = UIColor.clear
+            }
+            
+            if self.show{
+                GeometryReader{ geometry in
+                    Menu(title: title, description: description, website: website).position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                }.background(
+                    Color.black.opacity(0.65)
+                        .edgesIgnoringSafeArea(.all)
+                        .onTapGesture {
+                            withAnimation{
+                                self.show.toggle()
+                            }
+                        }
+                )
+            }
+        
+        }
+        .navigationTitle("Grief")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: { emergencyHelp() }, label: {
@@ -414,11 +992,16 @@ struct ContentView: View {
                             Image(systemName: "heart")
                             Text("Resources")
                         }.tag(2)
+                    ToolsView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing)
+                        .tabItem {
+                            Image(systemName: "lightbulb")
+                            Text("Tools")
+                        }.tag(3)
                     NotesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing)
                         .tabItem {
                             Image(systemName: "square.and.pencil")
                             Text("Notes")
-                        }.tag(3)
+                        }.tag(4)
                     
                 }
             }
