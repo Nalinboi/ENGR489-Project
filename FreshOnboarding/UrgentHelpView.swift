@@ -25,8 +25,8 @@ struct UrgentHelpView: View {
                 Group {
                     Text("If this is an ").bold() +
                         Text("emergency").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/) +
-                        Text(", please \n call the").bold() +
-                        Text(" hospital immediately").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Text(", please \n call ").bold() +
+                        Text(" Te Heika").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 }
                 .font(.system(size : 18))
                 .multilineTextAlignment(.center)
@@ -37,8 +37,8 @@ struct UrgentHelpView: View {
 //                            .renderingMode(.original)
 //                            .resizable()
 //                            .frame(width: 120, height: 100)
-                        Text("111").font(.system(size : 55, weight: .heavy)).padding()
-                        Text("Call the hospital now").font(.system(size : 20, weight: .light))
+                        Text("0800 745 477").font(.system(size : 30, weight: .heavy)).padding()
+                        Text("Call to get help now").font(.system(size : 20, weight: .light))
 
                         
                     }
@@ -97,50 +97,17 @@ struct UrgentHelpView: View {
                             
                     })
                 }
-                HStack {
-                    Button(action: {}, label: {
-                        VStack {
-                            Image(systemName: "paperplane")
-                                .resizable()
-                                .frame(width: 40, height: 32)
-                            Text("Webchat").font(.system(size : 15, weight: .light))
-                        }
-                        .font(.system(size : 50))
-                        .padding()
-                        .multilineTextAlignment(.center)
-                        .frame(width: 150, height: 100)
-                        .background(Color.blue.opacity(0.27))
-                        .cornerRadius(12)
-                        .padding(.horizontal)
-                            
-                    })
-                    Button(action: {}, label: {
-                        VStack {
-                            Image(systemName: "envelope")
-                                .resizable()
-                                .frame(width: 40, height: 32)
-                            Text("Email").font(.system(size : 15, weight: .light))
-                        }
-                        .font(.system(size : 50))
-                        .padding()
-                        .multilineTextAlignment(.center)
-                        .frame(width: 150, height: 100)
-                        .background(Color.blue.opacity(0.27))
-                        .cornerRadius(12)
-                        .padding(.horizontal)
-                            
-                    })
-                }
-                .padding()
             
-//                Spacer()
-//                Spacer()
+                Spacer()
+                Spacer()
                 Button(action: { dismiss() }, label: {
                     Text("Go back home")
                         .foregroundColor(.white)
                         .underline()
                 })
-                Spacer()
+                
+                
+
             }
             
         }

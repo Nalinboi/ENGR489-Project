@@ -180,7 +180,7 @@ struct NotesView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: { emergencyHelp() }, label: {
-                            Text("Need help now?")
+                            Text("Help")
                         })
                     }
                 }
@@ -306,7 +306,7 @@ struct ResourcesView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: { emergencyHelp() }, label: {
-                        Text("Need help now?")
+                        Text("Help")
                     })
                 }
             }
@@ -470,7 +470,7 @@ struct ToolsView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: { emergencyHelp() }, label: {
-                        Text("Need help now?")
+                        Text("Help")
                     })
                 }
             }
@@ -543,7 +543,7 @@ struct MHResourcesView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: { emergencyHelp() }, label: {
-                    Text("Need help now?")
+                    Text("Help")
                 })
             }
         }
@@ -617,7 +617,7 @@ struct AnxietyView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: { emergencyHelp() }, label: {
-                    Text("Need help now?")
+                    Text("Help")
                 })
             }
         }
@@ -839,7 +839,7 @@ struct GriefView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: { emergencyHelp() }, label: {
-                    Text("Need help now?")
+                    Text("Help")
                 })
             }
         }
