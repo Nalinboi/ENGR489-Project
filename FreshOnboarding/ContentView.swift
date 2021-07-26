@@ -54,7 +54,7 @@ struct HomeView: View {
                         Text("Waiting in the ").bold() +
                             Text("Emergency Department? ").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/) +
                             Text("\nWe're ").bold() +
-                            Text("Here to help").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                            Text("here to help").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                     }
                     .font(.system(size : 18))
                     .multilineTextAlignment(.center)
@@ -69,7 +69,7 @@ struct HomeView: View {
                                     .frame(width: 150, height: 100)
                                     .background(Color.blue.opacity(0.27))
                                     .cornerRadius(12)
-                                    .padding(.horizontal)
+                                    .padding(.all, 2)
                             })
                             Button(action: {emergencyHelp()}, label: {
                                 Text("People")
@@ -79,11 +79,11 @@ struct HomeView: View {
                                     .frame(width: 150, height: 100)
                                     .background(Color.blue.opacity(0.27))
                                     .cornerRadius(12)
-                                    .padding(.horizontal)
+                                    .padding(.all, 2)
                             })
                         }
                         .foregroundColor(.black)
-                        .padding()
+                        .padding(.all, 2)
                         HStack {
                             Button(action: {self.tabSelection = 2}, label: {
                                 Text("Places")
@@ -93,7 +93,7 @@ struct HomeView: View {
                                     .frame(width: 150, height: 100)
                                     .background(Color.blue.opacity(0.27))
                                     .cornerRadius(12)
-                                    .padding(.horizontal)
+                                    .padding(.all, 2)
                             })
                             Button(action: {emergencyHelp()}, label: {
                                 Text("Procedures")
@@ -103,11 +103,11 @@ struct HomeView: View {
                                     .frame(width: 150, height: 100)
                                     .background(Color.blue.opacity(0.27))
                                     .cornerRadius(12)
-                                    .padding(.horizontal)
+                                    .padding(.all, 2)
                             })
                         }
                         .foregroundColor(.black)
-                        .padding()
+                        .padding(.all, 2)
                     }
                     
                     
@@ -205,13 +205,13 @@ struct ResourcesView: View {
                 GradientView(isWalkthroughShowing: $isWalkthroughShowing)
                 VStack{
                     HStack{
-                        NavigationLink(destination: MHResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                        NavigationLink(destination: AnxietyView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                             VStack {
                                 Image(systemName: "heart")
                                     .resizable()
                                     .frame(width: 60, height: 55)
                                 //                                .renderingMode(.original)
-                                Text("Mental health resources")
+                                Text("Anxiety")
                             }
                             .padding()
                             .multilineTextAlignment(.center)
@@ -220,13 +220,13 @@ struct ResourcesView: View {
                             .cornerRadius(12)
                             .padding(.all, 2)
                         }
-                            NavigationLink(destination: MTResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                            NavigationLink(destination: DepressionView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                                 VStack {
                                     Image(systemName: "sun.min")
                                         .resizable()
                                         .frame(width: 60, height: 55)
                                         // .renderingMode(.original)
-                                    Text("Mindfullness tools")
+                                    Text("Depression")
                                 }
                                 .padding()
                                 .multilineTextAlignment(.center)
@@ -237,13 +237,13 @@ struct ResourcesView: View {
                             }
                         }
                     HStack{
-                        NavigationLink(destination: MHResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                        NavigationLink(destination: BullyingView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                             VStack {
                                 Image(systemName: "heart")
                                     .resizable()
                                     .frame(width: 60, height: 55)
                                 //                                .renderingMode(.original)
-                                Text("Mental health resources")
+                                Text("Bullying")
                             }
                             .padding()
                             .multilineTextAlignment(.center)
@@ -252,13 +252,13 @@ struct ResourcesView: View {
                             .cornerRadius(12)
                             .padding(.all, 2)
                         }
-                            NavigationLink(destination: MTResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                            NavigationLink(destination: GriefView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                                 VStack {
                                     Image(systemName: "sun.min")
                                         .resizable()
                                         .frame(width: 60, height: 55)
                                         // .renderingMode(.original)
-                                    Text("Mindfullness tools")
+                                    Text("Grief")
                                 }
                                 .padding()
                                 .multilineTextAlignment(.center)
@@ -347,10 +347,10 @@ struct ToolsView: View {
                             }
                             .padding()
                             .multilineTextAlignment(.center)
-                            .frame(width: 150, height: 100)
+                            .frame(width: 175, height: 200)
                             .background(Color.blue.opacity(0.27))
                             .cornerRadius(12)
-                            .padding(.all)
+                            .padding(.all, 2)
                         }
                             NavigationLink(destination: MTResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                                 VStack {
@@ -362,10 +362,10 @@ struct ToolsView: View {
                                 }
                                 .padding()
                                 .multilineTextAlignment(.center)
-                                .frame(width: 150, height: 100)
+                                .frame(width: 175, height: 200)
                                 .background(Color.blue.opacity(0.27))
                                 .cornerRadius(12)
-                                .padding(.all)
+                                .padding(.all, 2)
                             }
                         }
                     HStack{
@@ -379,10 +379,10 @@ struct ToolsView: View {
                             }
                             .padding()
                             .multilineTextAlignment(.center)
-                            .frame(width: 150, height: 100)
+                            .frame(width: 175, height: 200)
                             .background(Color.blue.opacity(0.27))
                             .cornerRadius(12)
-                            .padding(.all)
+                            .padding(.all, 2)
                         }
                             NavigationLink(destination: MTResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                                 VStack {
@@ -394,10 +394,10 @@ struct ToolsView: View {
                                 }
                                 .padding()
                                 .multilineTextAlignment(.center)
-                                .frame(width: 150, height: 100)
+                                .frame(width: 175, height: 200)
                                 .background(Color.blue.opacity(0.27))
                                 .cornerRadius(12)
-                                .padding(.all)
+                                .padding(.all, 2)
                             }
                         }
                     HStack{
@@ -411,10 +411,10 @@ struct ToolsView: View {
                             }
                             .padding()
                             .multilineTextAlignment(.center)
-                            .frame(width: 150, height: 100)
+                            .frame(width: 175, height: 200)
                             .background(Color.blue.opacity(0.27))
                             .cornerRadius(12)
-                            .padding(.all)
+                            .padding(.all, 2)
                         }
                             NavigationLink(destination: MTResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                                 VStack {
@@ -426,42 +426,10 @@ struct ToolsView: View {
                                 }
                                 .padding()
                                 .multilineTextAlignment(.center)
-                                .frame(width: 150, height: 100)
+                                .frame(width: 175, height: 200)
                                 .background(Color.blue.opacity(0.27))
                                 .cornerRadius(12)
-                                .padding(.all)
-                            }
-                        }
-                    HStack{
-                        NavigationLink(destination: MHResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
-                            VStack {
-                                Image(systemName: "heart")
-                                    .resizable()
-                                    .frame(width: 60, height: 55)
-                                //                                .renderingMode(.original)
-                                Text("Mental health resources")
-                            }
-                            .padding()
-                            .multilineTextAlignment(.center)
-                            .frame(width: 150, height: 100)
-                            .background(Color.blue.opacity(0.27))
-                            .cornerRadius(12)
-                            .padding(.all)
-                        }
-                            NavigationLink(destination: MTResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
-                                VStack {
-                                    Image(systemName: "sun.min")
-                                        .resizable()
-                                        .frame(width: 60, height: 55)
-                                        // .renderingMode(.original)
-                                    Text("Mindfullness tools")
-                                }
-                                .padding()
-                                .multilineTextAlignment(.center)
-                                .frame(width: 150, height: 100)
-                                .background(Color.blue.opacity(0.27))
-                                .cornerRadius(12)
-                                .padding(.all)
+                                .padding(.all, 2)
                             }
                         }
                     }
