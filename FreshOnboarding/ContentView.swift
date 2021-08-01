@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+var listToGive = overview
+
+
 struct HomeView: View {
     @Binding var tabSelection: Int
     @Binding var isWalkthroughShowing: Bool
@@ -61,7 +64,11 @@ struct HomeView: View {
                     
                     VStack{
                         HStack {
-                            Button(action: {self.tabSelection = 2}, label: {
+                            Button(action: {
+                                    // self.tabSelection = 2
+                                listToGive = overview;
+                                goWalkthrough()
+                            }, label: {
                                 Text("Overview")
                                     // .fontWeight(.light)
                                     .padding()
@@ -71,7 +78,10 @@ struct HomeView: View {
                                     .cornerRadius(12)
                                     .padding(.all, 2)
                             })
-                            Button(action: {emergencyHelp()}, label: {
+                            Button(action: {
+                                listToGive = people;
+                                goWalkthrough()
+                            }, label: {
                                 Text("People")
                                     // .fontWeight(.heavy)
                                     .padding()
@@ -85,7 +95,10 @@ struct HomeView: View {
                         .foregroundColor(.black)
                         .padding(.all, 2)
                         HStack {
-                            Button(action: {self.tabSelection = 2}, label: {
+                            Button(action: {
+                                listToGive = places;
+                                goWalkthrough()
+                            }, label: {
                                 Text("Places")
                                     // .fontWeight(.light)
                                     .padding()
@@ -95,7 +108,10 @@ struct HomeView: View {
                                     .cornerRadius(12)
                                     .padding(.all, 2)
                             })
-                            Button(action: {emergencyHelp()}, label: {
+                            Button(action: {
+                                listToGive = procedures;
+                                goWalkthrough()
+                            }, label: {
                                 Text("Procedures")
                                     // .fontWeight(.heavy)
                                     .padding()
@@ -944,7 +960,7 @@ struct ContentView: View {
     var body: some View {
         Group{
             if isWalkthroughShowing {
-                WalkthroughView(isWalkthroughShowing: $isWalkthroughShowing)
+                WalkthroughView(isWalkthroughShowing: $isWalkthroughShowing, givenTabs: listToGive)
             } else if isUrgentHelpShowing {
                 UrgentHelpView(isUrgentHelpShowing: $isUrgentHelpShowing)
             }

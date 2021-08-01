@@ -105,9 +105,6 @@ struct UrgentHelpView: View {
                         .foregroundColor(.white)
                         .underline()
                 })
-                
-                
-
             }
             
         }

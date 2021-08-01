@@ -10,6 +10,7 @@ import SwiftUI
 struct ButtonsView: View {
     @Binding var selection: Int
     let buttons = ["Previous", "Next"]
+    let givenTabs: Array<Page>
     
     var body: some View {
         HStack {
@@ -33,7 +34,7 @@ struct ButtonsView: View {
         withAnimation {
             if buttonLabel == "Previous" && selection > 0 {
                 selection -= 1
-            } else if buttonLabel == "Next" && selection < tabs.count - 1 {
+            } else if buttonLabel == "Next" && selection < givenTabs.count - 1 {
                 selection += 1
             }
         }
@@ -42,6 +43,6 @@ struct ButtonsView: View {
 
 struct ButtonsView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonsView(selection: Binding.constant(0))
+        ButtonsView(selection: Binding.constant(0), givenTabs: overview)
     }
 }

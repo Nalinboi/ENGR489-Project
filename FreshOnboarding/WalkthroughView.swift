@@ -10,13 +10,14 @@ import SwiftUI
 struct WalkthroughView: View {
     @State private var selection = 0
     @Binding var isWalkthroughShowing: Bool
-     
+    let givenTabs: Array<Page>
+
     var body: some View {
         ZStack{
             GradientView(isWalkthroughShowing: $isWalkthroughShowing)
             VStack {
-                PageTabView(selection: $selection)
-                ButtonsView(selection: $selection)
+                PageTabView(selection: $selection, givenTabs: givenTabs)
+                ButtonsView(selection: $selection, givenTabs: givenTabs)
                 AccountButtonView(isWalkthroughShowing: $isWalkthroughShowing)
             }
         }
@@ -26,7 +27,7 @@ struct WalkthroughView: View {
 
 struct WalkthroughView_Previews: PreviewProvider {
     static var previews: some View {
-        WalkthroughView(isWalkthroughShowing: Binding.constant(true))
+        WalkthroughView(isWalkthroughShowing: Binding.constant(true), givenTabs: overview)
     }
 }
  

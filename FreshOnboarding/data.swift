@@ -7,12 +7,33 @@
 
 import Foundation
 
-let tabs = [
+let overview = [
     Page(image: "bell", title: "Check in", text: "When you first enter the Emergency Department (ED), make sure you\n check in at the reception.\n\nHere they will ask for basic \ndetails to put you on the ED patient list."),
     Page(image: "clock", title: "Waiting room", text: "Once you have checked into reception, you will have to wait in the waiting room. \n\nHere, one of four things could happen. You may be triaged, assessed further, admitted, or even discharged home."),
     Page(image: "exclamationmark.bubble", title: "How can we help?", text: "You and your Whānau might need to wait in the waiting room, cubical, corridor, Whānau room. \n\nPlease let the staff know if you need food/drinks/blankets, if things are getting worse, if you are thinking of leaving, medication, or any other help at all."),
     Page(image: "person.3", title: "Who will see you?", text: "There are 3 different people that may see you. \n\nAn ED Doctor (who may refer you to the CRS), \nMental Health Liaison Nurse (on duty only at certain times), \nor Crisis Resolution Service (CRS) (only if you have been referred)"),
-    Page(image: "person", title: "Triage nurse", text: "The most likely case is that a triage nurse will see you shortly after checking in. \n\nHere they will triage you, which means they will assess your level of severity, and ensure you are safe, as well as ordering you inside a priority queue to be treated."),
+    Page(image: "person", title: "Triage nurse", text: "The most likely case is that a triage nurse will see you shortly after checking in. \n\nHere they will triage you, which means they will assess your level of severity, and ensure you are safe, as well as ordering you inside a priority queue to be treated."),]
+
+let people = [
+    Page(image: "Administrator", title: "Administrator", text: "Administrator"),
+    Page(image: "ED Nurse", title: "ED Nurse", text: "ED Nurse"),
+    Page(image: "Health Care Assistant (HCA)", title: "Health Care Assistant (HCA)", text: "Health Care Assistant (HCA)"),
+    
+    Page(image: "Security orderly", title: "Security orderly", text: "Security orderly"),
+    Page(image: "ED mental health nurse", title: "ED mental health nurse", text: "ED mental health  nurse"),
+    
+    Page(image: "ED doctor", title: "ED doctor", text: "ED doctor"),
+    Page(image: "Staff from Crisis Resolution Service (CRS)", title: "Staff from Crisis Resolution  Service (CRS)", text: "Staff from Crisis Resolution Service (CRS)"),
+    
+    Page(image: "Other doctors (from medical or surgical team)", title: "Other doctors (from medical or     surgical team)", text: "Other doctors (from medical or surgical team)"),
+]
+
+let places = [
+    Page(image: "bell", title: "we are making places...", text: "places to come "),
+]
+
+let procedures = [
+    Page(image: "bell", title: "we are making procedures...", text: "procedures to come "),
 ]
 
 let mhresources = [

@@ -9,24 +9,25 @@ import SwiftUI
 
 struct TabDetailsView: View {
     let index: Int
+    let givenTabs: Array<Page>
     var body: some View {
         VStack {
             Spacer()
             Spacer()
             
-            Image(systemName: tabs[index].image)
+            Image(systemName: givenTabs[index].image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 210)
             
             Spacer()
             
-            Text(tabs[index].title)
+            Text(givenTabs[index].title)
                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 .bold()
                 .frame(width:400)
             
-            Text(tabs[index].text)
+            Text(givenTabs[index].text)
                 .padding()
                 .frame(width:400)
                 .multilineTextAlignment(.center)
@@ -34,9 +35,6 @@ struct TabDetailsView: View {
 
         }
         .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-//        .foregroundColor(Color(#colorLiteral(red: 1, green: 0, blue: 0.5857753158, alpha: 1)))  // Not neccessary but its cool that it changes all text color
-        
-        
     }
 }
 
@@ -44,7 +42,7 @@ struct TabDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             GradientView(isWalkthroughShowing: Binding.constant(true))
-            TabDetailsView(index: 0)
+            TabDetailsView(index: 0, givenTabs: overview)
         }
         
     }
