@@ -8,7 +8,7 @@
 import Foundation
 
 let overview = [
-    Page(image: "bell", title: "Check in", text: "When you first enter the Emergency Department (ED), make sure you\n check in at the reception.\n\nHere they will ask for basic \ndetails to put you on the ED patient list."),
+    Page(image: "administrator1", title: "Check in", text: "When you first enter the Emergency Department (ED), make sure you\n check in at the reception.\n\nHere they will ask for basic \ndetails to put you on the ED patient list."),
     Page(image: "clock", title: "Waiting room", text: "Once you have checked into reception, you will have to wait in the waiting room. \n\nHere, one of four things could happen. You may be triaged, assessed further, admitted, or even discharged home."),
     Page(image: "exclamationmark.bubble", title: "How can we help?", text: "You and your Whānau might need to wait in the waiting room, cubical, corridor, Whānau room. \n\nPlease let the staff know if you need food/drinks/blankets, if things are getting worse, if you are thinking of leaving, medication, or any other help at all."),
     Page(image: "person.3", title: "Who will see you?", text: "There are 3 different people that may see you. \n\nAn ED Doctor (who may refer you to the CRS), \nMental Health Liaison Nurse (on duty only at certain times), \nor Crisis Resolution Service (CRS) (only if you have been referred)"),
