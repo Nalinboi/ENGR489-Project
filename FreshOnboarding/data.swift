@@ -15,21 +15,26 @@ let overview = [
     Page(image: "person", title: "Triage nurse", text: "The most likely case is that a triage nurse will see you shortly after checking in. \n\nHere they will triage you, which means they will assess your level of severity, and ensure you are safe, as well as ordering you inside a priority queue to be treated."),]
 
 let people = [
-    Page(image: "Administrator", title: "Administrator", text: "Administrator"),
-    Page(image: "ED Nurse", title: "ED Nurse", text: "ED Nurse"),
-    Page(image: "Health Care Assistant (HCA)", title: "Health Care Assistant (HCA)", text: "Health Care Assistant (HCA)"),
+    Page(image: "person", title: "Administrator", text: "The administrator is responsible for organizing and overseeing the health services and daily activities of the emergency department.\n\nThey are also in charge of relaying information onto other staff at the hospital, so it is important that they are aware of your presence.\n\nIf you haven’t already, please check in with the administrator now."),
     
-    Page(image: "Security orderly", title: "Security orderly", text: "Security orderly"),
-    Page(image: "ED mental health nurse", title: "ED mental health nurse", text: "ED mental health  nurse"),
+    Page(image: "person", title: "ED Nurse", text: "The Emergency Department Nurse is in charge of triaging all who have checked in with the administrator and are now waiting.\n\nTriaging means they will assess your level of severity, and ensure you are safe, as well as ordering you inside a priority queue to be treated."),
     
-    Page(image: "ED doctor", title: "ED doctor", text: "ED doctor"),
-    Page(image: "Staff from Crisis Resolution Service (CRS)", title: "Staff from Crisis Resolution  Service (CRS)", text: "Staff from Crisis Resolution Service (CRS)"),
+    Page(image: "person", title: "ED mental health nurse", text: "Once your physical health has been assessed as ok, ED staff might ask you a bit more about what has been happening, how you are currently feeling and your opinions on what you would like to happen next"),
     
-    Page(image: "Other doctors (from medical or surgical team)", title: "Other doctors (from medical or     surgical team)", text: "Other doctors (from medical or surgical team)"),
+    Page(image: "Health Care Assistant (HCA)", title: "Health Care Assistant (HCA)", text: "Healthcare assistants are trained professionals who not only support staff, but most importantly look after individuals waiting in the emergency department.\n\nIf you need anything at all please try to look for one and ask for assistance if need be."),
+    
+    Page(image: "Security orderly", title: "Security orderly", text: "Security is there to ensure the safety of everyone. They are there to ensure that no patient in the waiting room is causing harm to themselves or anyone else."),
+    
+    Page(image: "ED doctor", title: "ED doctor", text: "An ED doctor often checks out a patient's physical health because poor physical health can affect mental health. Also, if you are harmed in some way, they will do some tests and treatments such as taking your blood pressure, taking a blood test, taking an xray, monitoring your heart or giving you medication"),
+    
+    Page(image: "Staff from Crisis Resolution Service (CRS)", title: "Staff from Crisis Resolution Service (CRS)", text: "Staff from CRS will only come to you if you have been referred. They are here to resolve any crisis you may be currently facing. The CRS will have a chat with you (and if possible your whānau) about what has been happening recently, how you are feeling at the moment and what to do next. \n\nWhen the CRT staff is ready to meet up with you, they will either call you into an interview room from the waiting room, or they will see you in a cubicle, or see you in the ED Observation Unit"),
+    
+    Page(image: "Other doctors (from medical or surgical team)", title: "Other doctors (from medical or surgical team)", text: "Other doctors (from medical or surgical team)"),
 ]
 
 let places = [
     Page(image: "bell", title: "we are making places...", text: "places to come "),
+    
 ]
 
 let procedures = [

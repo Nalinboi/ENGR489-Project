@@ -15,7 +15,7 @@ struct TabDetailsView: View {
             Spacer()
             Spacer()
             
-            Image("administrator1")
+            Image(systemName: givenTabs[index].image)
                 .resizable()
                 .renderingMode(.template)
                 .foregroundColor(.blue)
