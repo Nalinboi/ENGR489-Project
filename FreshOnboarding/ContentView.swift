@@ -176,54 +176,6 @@ struct HomeView: View {
     }
 }
 
-struct NotesView: View {
-    @Binding var isUrgentHelpShowing: Bool
-    @Binding var isWalkthroughShowing: Bool
-    @State var reason = ""
-    @State var doctor = ""
-
-
-    var body: some View {
-        NavigationView{
-            ZStack {
-                GradientView(isWalkthroughShowing: $isWalkthroughShowing)
-
-                VStack{
-                    Form {
-                        Section {
-                            TextField("Doctor", text: $doctor)
-                            TextField("Reason of appointment", text: $reason)
-                            
-                        }
-                    }.onAppear() {
-                        UITableView.appearance().backgroundColor = UIColor.clear
-                        UITableViewCell.appearance().backgroundColor = UIColor.clear
-                    }
-                }
-//                        .listRowBackground(Color.clear)
-//                }.onAppear() {
-//                    UITableView.appearance().backgroundColor = UIColor.clear
-//                    UITableViewCell.appearance().backgroundColor = UIColor.clear
-//                }
-                
-                .navigationTitle("Notes")
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button(action: { emergencyHelp() }, label: {
-                            Text("Help")
-                        })
-                    }
-                }
-            }
-        }
-    }
-    func emergencyHelp(){
-        withAnimation {
-            isUrgentHelpShowing.toggle()
-        }
-    }
-}
-
 struct ResourcesView: View {
     @Binding var isUrgentHelpShowing: Bool
     @Binding var isWalkthroughShowing: Bool
@@ -1143,12 +1095,6 @@ struct ContentView: View {
                             Image(systemName: "lightbulb")
                             Text("Tools")
                         }.tag(3)
-                    NotesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing)
-                        .tabItem {
-                            Image(systemName: "square.and.pencil")
-                            Text("Notes")
-                        }.tag(4)
-                    
                 }
             }
         }
