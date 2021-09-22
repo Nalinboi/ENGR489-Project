@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F42AA9E826FB829E006C2FC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42AA9E726FB829E006C2FC6 /* LaunchScreen.storyboard */; };
 		F48052282681EC5F003DC3E8 /* FreshOnboardingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48052272681EC5F003DC3E8 /* FreshOnboardingApp.swift */; };
 		F480522A2681EC5F003DC3E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48052292681EC5F003DC3E8 /* ContentView.swift */; };
 		F480522C2681EC65003DC3E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F480522B2681EC65003DC3E8 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F42AA9E726FB829E006C2FC6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F48052242681EC5F003DC3E8 /* FreshOnboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshOnboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48052272681EC5F003DC3E8 /* FreshOnboardingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshOnboardingApp.swift; sourceTree = "<group>"; };
 		F48052292681EC5F003DC3E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				F480527C2681FD7F003DC3E8 /* ButtonsView.swift */,
 				F480528126820BBE003DC3E8 /* AccountButtonView.swift */,
 				F48052892682AE39003DC3E8 /* UrgentHelpView.swift */,
+				F42AA9E726FB829E006C2FC6 /* LaunchScreen.storyboard */,
 			);
 			path = FreshOnboarding;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F42AA9E826FB829E006C2FC6 /* LaunchScreen.storyboard in Resources */,
 				F480522F2681EC65003DC3E8 /* Preview Assets.xcassets in Resources */,
 				F480522C2681EC65003DC3E8 /* Assets.xcassets in Resources */,
 			);
