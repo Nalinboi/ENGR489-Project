@@ -38,7 +38,7 @@ struct HomeView: View {
                                 .padding(.horizontal)
                         })
                         Button(action: {emergencyHelp()}, label: {
-                            Text("Need help now?")
+                            Text("Help")
                                 // .fontWeight(.heavy)
                                 .padding()
                                 .multilineTextAlignment(.center)
@@ -69,8 +69,22 @@ struct HomeView: View {
                                 listToGive = overview;
                                 goWalkthrough()
                             }, label: {
-                                Text("Overview")
-                                    // .fontWeight(.light)
+                                                        ZStack{
+//                                                            Image("flag")
+//                                                                .resizable()
+//                                                                .frame(width: 60, height: 55)
+//                                                                .opacity(0.33)
+                                                            Text("Emergency Department Walkthrough")
+                                                                .padding()
+                                                                .multilineTextAlignment(.center)
+                                                                .frame(width: 150, height: 100)
+                                                                .background(Color.blue.opacity(0.27))
+                                                                .cornerRadius(12)
+                                                                .padding(.all, 2)
+                                                        }
+                                //                    })
+//                                Text("Overview")
+//                                    // .fontWeight(.light)
                                     .padding()
                                     .multilineTextAlignment(.center)
                                     .frame(width: 150, height: 100)
@@ -221,13 +235,13 @@ struct ResourcesView: View {
                 GradientView(isWalkthroughShowing: $isWalkthroughShowing)
                 VStack{
                     HStack{
-                        NavigationLink(destination: AnxietyView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                        NavigationLink(destination: GeneralResourceView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                             VStack {
-                                Image(systemName: "heart")
+                                Image("mental_health")
                                     .resizable()
                                     .frame(width: 60, height: 55)
                                 //                                .renderingMode(.original)
-                                Text("Anxiety")
+                                Text("General")
                             }
                             .padding()
                             .multilineTextAlignment(.center)
@@ -236,13 +250,13 @@ struct ResourcesView: View {
                             .cornerRadius(12)
                             .padding(.all, 2)
                         }
-                            NavigationLink(destination: DepressionView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                            NavigationLink(destination: AnxietyDepressionView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                                 VStack {
-                                    Image(systemName: "sun.min")
+                                    Image("worried")
                                         .resizable()
                                         .frame(width: 60, height: 55)
                                         // .renderingMode(.original)
-                                    Text("Depression")
+                                    Text("Anxiety / Depression")
                                 }
                                 .padding()
                                 .multilineTextAlignment(.center)
@@ -253,13 +267,13 @@ struct ResourcesView: View {
                             }
                         }
                     HStack{
-                        NavigationLink(destination: BullyingView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                        NavigationLink(destination: YouthView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                             VStack {
                                 Image(systemName: "heart")
                                     .resizable()
                                     .frame(width: 60, height: 55)
                                 //                                .renderingMode(.original)
-                                Text("Bullying")
+                                Text("Youth")
                             }
                             .padding()
                             .multilineTextAlignment(.center)
@@ -268,13 +282,13 @@ struct ResourcesView: View {
                             .cornerRadius(12)
                             .padding(.all, 2)
                         }
-                            NavigationLink(destination: GriefView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                            NavigationLink(destination: IdentityView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                                 VStack {
-                                    Image(systemName: "sun.min")
+                                    Image(systemName: "person")
                                         .resizable()
                                         .frame(width: 60, height: 55)
                                         // .renderingMode(.original)
-                                    Text("Grief")
+                                    Text("Identity")
                                 }
                                 .padding()
                                 .multilineTextAlignment(.center)
@@ -285,13 +299,13 @@ struct ResourcesView: View {
                             }
                         }
                     HStack{
-                        NavigationLink(destination: MHResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                        NavigationLink(destination: FamilyFriendsView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                             VStack {
-                                Image(systemName: "heart")
+                                Image(systemName: "person.3")
                                     .resizable()
-                                    .frame(width: 60, height: 55)
+                                    .frame(width: 60, height: 40)
                                 //                                .renderingMode(.original)
-                                Text("Mental health resources")
+                                Text("Family / Friends")
                             }
                             .padding()
                             .multilineTextAlignment(.center)
@@ -300,13 +314,13 @@ struct ResourcesView: View {
                             .cornerRadius(12)
                             .padding(.all, 2)
                         }
-                            NavigationLink(destination: MTResourcesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
+                            NavigationLink(destination: HelplinesView(isUrgentHelpShowing: $isUrgentHelpShowing, isWalkthroughShowing: $isWalkthroughShowing, show: false)) {
                                 VStack {
-                                    Image(systemName: "sun.min")
+                                    Image("phone")
                                         .resizable()
                                         .frame(width: 60, height: 55)
                                         // .renderingMode(.original)
-                                    Text("Mindfullness tools")
+                                    Text("Helplines")
                                 }
                                 .padding()
                                 .multilineTextAlignment(.center)
@@ -549,7 +563,7 @@ struct MHResourcesView: View {
     }
 }
 
-struct AnxietyView: View {
+struct GeneralResourceView: View {
     @Binding var isUrgentHelpShowing: Bool
     @Binding var isWalkthroughShowing: Bool
     @State var show = false
@@ -564,13 +578,13 @@ struct AnxietyView: View {
             GradientView(isWalkthroughShowing: $isWalkthroughShowing)
             
             List {
-                ForEach(anxResources.indices, id: \.self) { index in
+                ForEach(genResources.indices, id: \.self) { index in
                     
-                    Button(action: { emergencyShow(title: anxResources[index].title, description: anxResources[index].description, website: anxResources[index].website) }, label: {
+                    Button(action: { emergencyShow(title: genResources[index].title, description: genResources[index].description, website: genResources[index].website) }, label: {
                         VStack(alignment: .leading) {
-                                Label(anxResources[index].title, systemImage: "house").font(.headline)
+                                Label(genResources[index].title, systemImage: "house").font(.headline)
                                 Divider()
-                                Label(anxResources[index].website, systemImage: "link")
+                                Label(genResources[index].website, systemImage: "link")
                             }
                         })
                         .padding()
@@ -597,7 +611,7 @@ struct AnxietyView: View {
             }
         
         }
-        .navigationTitle("Anxiety")
+        .navigationTitle("General")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: { emergencyHelp() }, label: {
@@ -623,7 +637,7 @@ struct AnxietyView: View {
     }
 }
 
-struct DepressionView: View {
+struct AnxietyDepressionView: View {
     @Binding var isUrgentHelpShowing: Bool
     @Binding var isWalkthroughShowing: Bool
     @State var show = false
@@ -638,13 +652,13 @@ struct DepressionView: View {
             GradientView(isWalkthroughShowing: $isWalkthroughShowing)
             
             List {
-                ForEach(depResources.indices, id: \.self) { index in
+                ForEach(anxdepResources.indices, id: \.self) { index in
                     
-                    Button(action: { emergencyShow(title: depResources[index].title, description: depResources[index].description, website: depResources[index].website) }, label: {
+                    Button(action: { emergencyShow(title: anxdepResources[index].title, description: anxdepResources[index].description, website: anxdepResources[index].website) }, label: {
                         VStack(alignment: .leading) {
-                                Label(depResources[index].title, systemImage: "house").font(.headline)
+                                Label(anxdepResources[index].title, systemImage: "house").font(.headline)
                                 Divider()
-                                Label(depResources[index].website, systemImage: "link")
+                                Label(anxdepResources[index].website, systemImage: "link")
                             }
                         })
                         .padding()
@@ -671,11 +685,11 @@ struct DepressionView: View {
             }
         
         }
-        .navigationTitle("Depression")
+        .navigationTitle("Anxiety / Depression")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: { emergencyHelp() }, label: {
-                    Text("Need help now?")
+                    Text("Help")
                 })
             }
         }
@@ -697,7 +711,7 @@ struct DepressionView: View {
     }
 }
 
-struct BullyingView: View {
+struct YouthView: View {
     @Binding var isUrgentHelpShowing: Bool
     @Binding var isWalkthroughShowing: Bool
     @State var show = false
@@ -712,13 +726,13 @@ struct BullyingView: View {
             GradientView(isWalkthroughShowing: $isWalkthroughShowing)
             
             List {
-                ForEach(bulResources.indices, id: \.self) { index in
+                ForEach(youthResources.indices, id: \.self) { index in
                     
-                    Button(action: { emergencyShow(title: bulResources[index].title, description: bulResources[index].description, website: bulResources[index].website) }, label: {
+                    Button(action: { emergencyShow(title: youthResources[index].title, description: youthResources[index].description, website: youthResources[index].website) }, label: {
                         VStack(alignment: .leading) {
-                                Label(bulResources[index].title, systemImage: "house").font(.headline)
+                                Label(youthResources[index].title, systemImage: "house").font(.headline)
                                 Divider()
-                                Label(bulResources[index].website, systemImage: "link")
+                                Label(youthResources[index].website, systemImage: "link")
                             }
                         })
                         .padding()
@@ -745,11 +759,11 @@ struct BullyingView: View {
             }
         
         }
-        .navigationTitle("Bullying")
+        .navigationTitle("Youth")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: { emergencyHelp() }, label: {
-                    Text("Need help now?")
+                    Text("Help")
                 })
             }
         }
@@ -771,7 +785,7 @@ struct BullyingView: View {
     }
 }
 
-struct GriefView: View {
+struct HelplinesView: View {
     @Binding var isUrgentHelpShowing: Bool
     @Binding var isWalkthroughShowing: Bool
     @State var show = false
@@ -786,13 +800,13 @@ struct GriefView: View {
             GradientView(isWalkthroughShowing: $isWalkthroughShowing)
             
             List {
-                ForEach(griefResources.indices, id: \.self) { index in
+                ForEach(helplinesResources.indices, id: \.self) { index in
                     
-                    Button(action: { emergencyShow(title: griefResources[index].title, description: griefResources[index].description, website: griefResources[index].website) }, label: {
+                    Button(action: { emergencyShow(title: helplinesResources[index].title, description: helplinesResources[index].description, website: helplinesResources[index].website) }, label: {
                         VStack(alignment: .leading) {
-                                Label(griefResources[index].title, systemImage: "house").font(.headline)
+                                Label(helplinesResources[index].title, systemImage: "house").font(.headline)
                                 Divider()
-                                Label(griefResources[index].website, systemImage: "link")
+                                Label(helplinesResources[index].website, systemImage: "link")
                             }
                         })
                         .padding()
@@ -819,7 +833,155 @@ struct GriefView: View {
             }
         
         }
-        .navigationTitle("Grief")
+        .navigationTitle("Youth")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: { emergencyHelp() }, label: {
+                    Text("Help")
+                })
+            }
+        }
+    }
+    
+    func emergencyShow(title: String, description: String, website: String){
+        self.title = title
+        self.description = description
+        self.website = website
+        withAnimation {
+            show.toggle()
+        }
+    }
+    
+    func emergencyHelp(){
+        withAnimation {
+            isUrgentHelpShowing.toggle()
+        }
+    }
+}
+
+struct IdentityView: View {
+    @Binding var isUrgentHelpShowing: Bool
+    @Binding var isWalkthroughShowing: Bool
+    @State var show = false
+    
+    @State var title = ""
+    @State var description = ""
+    @State var website = ""
+
+    
+    var body: some View {
+        ZStack {
+            GradientView(isWalkthroughShowing: $isWalkthroughShowing)
+            
+            List {
+                ForEach(identityResources.indices, id: \.self) { index in
+                    
+                    Button(action: { emergencyShow(title: identityResources[index].title, description: identityResources[index].description, website: identityResources[index].website) }, label: {
+                        VStack(alignment: .leading) {
+                                Label(identityResources[index].title, systemImage: "house").font(.headline)
+                                Divider()
+                                Label(identityResources[index].website, systemImage: "link")
+                            }
+                        })
+                        .padding()
+                        .background(Color.secondary.opacity(0.25))
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                    }.listRowBackground(Color.clear)
+            }.onAppear() {
+                UITableView.appearance().backgroundColor = UIColor.clear
+                UITableViewCell.appearance().backgroundColor = UIColor.clear
+            }
+            
+            if self.show{
+                GeometryReader{ geometry in
+                    Menu(title: title, description: description, website: website).position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                }.background(
+                    Color.black.opacity(0.65)
+                        .edgesIgnoringSafeArea(.all)
+                        .onTapGesture {
+                            withAnimation{
+                                self.show.toggle()
+                            }
+                        }
+                )
+            }
+        
+        }
+        .navigationTitle("Identity")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: { emergencyHelp() }, label: {
+                    Text("Help")
+                })
+            }
+        }
+    }
+    
+    func emergencyShow(title: String, description: String, website: String){
+        self.title = title
+        self.description = description
+        self.website = website
+        withAnimation {
+            show.toggle()
+        }
+    }
+    
+    func emergencyHelp(){
+        withAnimation {
+            isUrgentHelpShowing.toggle()
+        }
+    }
+}
+
+struct FamilyFriendsView: View {
+    @Binding var isUrgentHelpShowing: Bool
+    @Binding var isWalkthroughShowing: Bool
+    @State var show = false
+    
+    @State var title = ""
+    @State var description = ""
+    @State var website = ""
+
+    
+    var body: some View {
+        ZStack {
+            GradientView(isWalkthroughShowing: $isWalkthroughShowing)
+            
+            List {
+                ForEach(famfriendsResources.indices, id: \.self) { index in
+                    
+                    Button(action: { emergencyShow(title: famfriendsResources[index].title, description: famfriendsResources[index].description, website: famfriendsResources[index].website) }, label: {
+                        VStack(alignment: .leading) {
+                                Label(famfriendsResources[index].title, systemImage: "house").font(.headline)
+                                Divider()
+                                Label(famfriendsResources[index].website, systemImage: "link")
+                            }
+                        })
+                        .padding()
+                        .background(Color.secondary.opacity(0.25))
+                        .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                    }.listRowBackground(Color.clear)
+            }.onAppear() {
+                UITableView.appearance().backgroundColor = UIColor.clear
+                UITableViewCell.appearance().backgroundColor = UIColor.clear
+            }
+            
+            if self.show{
+                GeometryReader{ geometry in
+                    Menu(title: title, description: description, website: website).position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                }.background(
+                    Color.black.opacity(0.65)
+                        .edgesIgnoringSafeArea(.all)
+                        .onTapGesture {
+                            withAnimation{
+                                self.show.toggle()
+                            }
+                        }
+                )
+            }
+        
+        }
+        .navigationTitle("Identity")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: { emergencyHelp() }, label: {
@@ -897,7 +1059,7 @@ struct MTResourcesView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: { emergencyHelp() }, label: {
-                    Text("Need help now?")
+                    Text("Help")
                 })
             }
         }

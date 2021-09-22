@@ -8,28 +8,29 @@
 import Foundation
 
 let overview = [
-    Page(image: "administrator1", title: "Check in", text: "When you first enter the Emergency Department (ED), make sure you\n check in at the reception.\n\nHere they will ask for basic \ndetails to put you on the ED patient list."),
-    Page(image: "clock", title: "Waiting room", text: "Once you have checked into reception, you will have to wait in the waiting room. \n\nHere, one of four things could happen. You may be triaged, assessed further, admitted, or even discharged home."),
-    Page(image: "exclamationmark.bubble", title: "How can we help?", text: "You and your Whānau might need to wait in the waiting room, cubical, corridor, Whānau room. \n\nPlease let the staff know if you need food/drinks/blankets, if things are getting worse, if you are thinking of leaving, medication, or any other help at all."),
-    Page(image: "person.3", title: "Who will see you?", text: "There are 3 different people that may see you. \n\nAn ED Doctor (who may refer you to the CRS), \nMental Health Liaison Nurse (on duty only at certain times), \nor Crisis Resolution Service (CRS) (only if you have been referred)"),
-    Page(image: "person", title: "Triage nurse", text: "The most likely case is that a triage nurse will see you shortly after checking in. \n\nHere they will triage you, which means they will assess your level of severity, and ensure you are safe, as well as ordering you inside a priority queue to be treated."),]
+    Page(image: "bell", title: "Check in", text: "When you first enter the Emergency Department (ED), make sure you\n check in at the reception.\n\nHere they will ask for basic \ndetails to put you on the ED patient list."),
+    Page(image: "clock", title: "Waiting room", text: "Once you have checked into reception, you will have to wait in the waiting room. \n\nHere you will have to wait for a triage nurse to assess you."),
+    Page(image: "person", title: "Triage nurse", text: "A triage nurse will see you shortly after checking in. \n\nHere they will triage you, which means they will assess your level of severity, and ensure you are safe, as well as ordering you inside a priority queue to be treated."),
+    Page(image: "exclamationmark.bubble", title: "How can we help?", text: "The emergency department can get a bit crowded at times, you and your Whānau might need to wait in the waiting room, cubical, corridor or Whānau room. \n\nPlease let the staff know if you need food/drinks/blankets/medication, if things are getting worse, if you are thinking of leaving, or any other help at all."),
+    Page(image: "person.3", title: "Who will see you?", text: "There are 3 different people that may see you after waiting. \n\nAn ED Doctor (who may refer you to the CRS), \nMental Health Liaison Nurse (on duty only at certain times), \nor Crisis Resolution Service (CRS) (only if you have been referred).")
+    ]
 
 let people = [
     Page(image: "person", title: "Administrator", text: "The administrator is responsible for organizing and overseeing the health services and daily activities of the emergency department.\n\nThey are also in charge of relaying information onto other staff at the hospital, so it is important that they are aware of your presence.\n\nIf you haven’t already, please check in with the administrator now."),
     
     Page(image: "person", title: "ED Nurse", text: "The Emergency Department Nurse is in charge of triaging all who have checked in with the administrator and are now waiting.\n\nTriaging means they will assess your level of severity, and ensure you are safe, as well as ordering you inside a priority queue to be treated."),
     
-    Page(image: "person", title: "ED mental health nurse", text: "Once your physical health has been assessed as ok, ED staff might ask you a bit more about what has been happening, how you are currently feeling and your opinions on what you would like to happen next"),
+    Page(image: "person", title: "ED mental health nurse", text: "Once your physical health has been assessed as ok, ED staff might ask you a bit more about what has been happening, how you are currently feeling and your opinions on what you would like to happen next."),
     
     Page(image: "Health Care Assistant (HCA)", title: "Health Care Assistant (HCA)", text: "Healthcare assistants are trained professionals who not only support staff, but most importantly look after individuals waiting in the emergency department.\n\nIf you need anything at all please try to look for one and ask for assistance if need be."),
     
     Page(image: "Security orderly", title: "Security orderly", text: "Security is there to ensure the safety of everyone. They are there to ensure that no patient in the waiting room is causing harm to themselves or anyone else."),
     
-    Page(image: "ED doctor", title: "ED doctor", text: "An ED doctor often checks out a patient's physical health because poor physical health can affect mental health. Also, if you are harmed in some way, they will do some tests and treatments such as taking your blood pressure, taking a blood test, taking an xray, monitoring your heart or giving you medication"),
+    Page(image: "ED doctor", title: "ED doctor", text: "An ED doctor often checks out a patient's physical health because poor physical health can affect mental health.\n\nAlso, if you are harmed in some way, they will do some tests and treatments such as taking your blood pressure, taking a blood test, taking an xray, monitoring your heart or giving you medication."),
     
-    Page(image: "Staff from Crisis Resolution Service (CRS)", title: "Staff from Crisis Resolution Service (CRS)", text: "Staff from CRS will only come to you if you have been referred. They are here to resolve any crisis you may be currently facing. The CRS will have a chat with you (and if possible your whānau) about what has been happening recently, how you are feeling at the moment and what to do next. \n\nWhen the CRT staff is ready to meet up with you, they will either call you into an interview room from the waiting room, or they will see you in a cubicle, or see you in the ED Observation Unit"),
+    Page(image: "Staff from Crisis Resolution Service (CRS)", title: "Crisis Resolution Service", text: "Staff from CRS will only come to you if you have been referred. They are here to resolve any crisis you may be currently facing.\n\n The CRS will have a chat with you (and if possible your Whānau) about what has been happening recently, how you are feeling at the moment and what to do next. \n\nWhen the CRT staff is ready to meet up with you, they will either call you into an interview room from the waiting room, or they will see you in a cubicle, or see you in the ED Observation Unit"),
     
-    Page(image: "Other doctors (from medical or surgical team)", title: "Other doctors (from medical or surgical team)", text: "Other doctors (from medical or surgical team)"),
+//    Page(image: "Other doctors (from medical or surgical team)", title: "Other doctors (from medical or surgical team)", text: "Other doctors (from medical or surgical team)"),
 ]
 
 let places = [
@@ -65,7 +66,7 @@ let mindfulnessTools = [
     Resource(title: "Mentemia", description: "App gives you the ability to monitor, manage and improve your mental health. You can set goals and track progress in much the same way other apps help you to track your physical fitness and health" , website: "www.mentemia.com/nz/home"),
 ]
 
-let anxResources = [
+let genResources = [
     Resource(title: "Mindful", description: "Mindful offers courses, corporate training, personal stories, news-you-can-use, practical advice, directories, and insights that speak to anyone from novice meditators looking for guidance to corporate managers exploring new ways to cultivate workplace engagement and fulfillment.", website: "www.mindful.org"),
     
     Resource(title: "SPARX", description: "SPARX is an interactive self-help online tool that teaches young people skills to help combat depression and anxiety.", website: "www.mindful.org"),
@@ -78,7 +79,7 @@ let anxResources = [
     Resource(title: "Mentemia", description: "App gives you the ability to monitor, manage and improve your mental health. You can set goals and track progress in much the same way other apps help you to track your physical fitness and health" , website: "www.mentemia.com/nz/home"),
 ]
 
-let depResources = [
+let anxdepResources = [
     Resource(title: "Mindful", description: "Mindful offers courses, corporate training, personal stories, news-you-can-use, practical advice, directories, and insights that speak to anyone from novice meditators looking for guidance to corporate managers exploring new ways to cultivate workplace engagement and fulfillment.", website: "www.mindful.org"),
     
     Resource(title: "SPARX", description: "SPARX is an interactive self-help online tool that teaches young people skills to help combat depression and anxiety.", website: "www.mindful.org"),
@@ -104,7 +105,7 @@ let bulResources = [
     Resource(title: "Mentemia", description: "App gives you the ability to monitor, manage and improve your mental health. You can set goals and track progress in much the same way other apps help you to track your physical fitness and health" , website: "www.mentemia.com/nz/home"),
 ]
 
-let griefResources = [
+let youthResources = [
     Resource(title: "Mindful", description: "Mindful offers courses, corporate training, personal stories, news-you-can-use, practical advice, directories, and insights that speak to anyone from novice meditators looking for guidance to corporate managers exploring new ways to cultivate workplace engagement and fulfillment.", website: "www.mindful.org"),
     
     Resource(title: "SPARX", description: "SPARX is an interactive self-help online tool that teaches young people skills to help combat depression and anxiety.", website: "www.mindful.org"),
@@ -130,7 +131,33 @@ let relationshipResources = [
     Resource(title: "Mentemia", description: "App gives you the ability to monitor, manage and improve your mental health. You can set goals and track progress in much the same way other apps help you to track your physical fitness and health" , website: "www.mentemia.com/nz/home"),
 ]
 
-let selfAcceptanceResources = [
+let helplinesResources = [
+    Resource(title: "Mindful", description: "Mindful offers courses, corporate training, personal stories, news-you-can-use, practical advice, directories, and insights that speak to anyone from novice meditators looking for guidance to corporate managers exploring new ways to cultivate workplace engagement and fulfillment.", website: "www.mindful.org"),
+    
+    Resource(title: "SPARX", description: "SPARX is an interactive self-help online tool that teaches young people skills to help combat depression and anxiety.", website: "www.mindful.org"),
+    
+    Resource(title: "Clearhead", description: "We provide you with specific and helpful resources for a range of situations we can all find ourselves in. We offer links to relevant websites, information sheets, books, videos and local support services to help with a wide range of mental health situations. Whatever you need help with, you will find something of value within our app and website." , website: "www.clearhead.org.nz"),
+    Resource(title: "All Right", description: "About being your best, coping in touch times, parenting and whānau, tea o Māori practice, identity and culture, workplace wellbeing, connecting with others" , website: "www.allright.org.nz"),
+    Resource(title: "Changing Minds", description: "Virtual community events aimed at supporting wellbeing in real-time – meditation, building confidence, tapering off medication support group etc." , website: "www.wellbeingsessions.nz"),
+    Resource(title: "Just a thought", description: "On-line courses to help tackle worry and stress (anxiety, depression, staying on track)" , website: "www.justathought.co.nz"),
+    Resource(title: "Melon", description: "The app provides access to an online community, daily webinars to support mental health and wellbeing, a health journal, tools to check in with yourself about how you’re feeling and podcasts, videos and articles to help you learn more about how you can look after your mental health and wellbeing" , website: "www.melon.com"),
+    Resource(title: "Mentemia", description: "App gives you the ability to monitor, manage and improve your mental health. You can set goals and track progress in much the same way other apps help you to track your physical fitness and health" , website: "www.mentemia.com/nz/home"),
+]
+
+let identityResources = [
+    Resource(title: "Mindful", description: "Mindful offers courses, corporate training, personal stories, news-you-can-use, practical advice, directories, and insights that speak to anyone from novice meditators looking for guidance to corporate managers exploring new ways to cultivate workplace engagement and fulfillment.", website: "www.mindful.org"),
+    
+    Resource(title: "SPARX", description: "SPARX is an interactive self-help online tool that teaches young people skills to help combat depression and anxiety.", website: "www.mindful.org"),
+    
+    Resource(title: "Clearhead", description: "We provide you with specific and helpful resources for a range of situations we can all find ourselves in. We offer links to relevant websites, information sheets, books, videos and local support services to help with a wide range of mental health situations. Whatever you need help with, you will find something of value within our app and website." , website: "www.clearhead.org.nz"),
+    Resource(title: "All Right", description: "About being your best, coping in touch times, parenting and whānau, tea o Māori practice, identity and culture, workplace wellbeing, connecting with others" , website: "www.allright.org.nz"),
+    Resource(title: "Changing Minds", description: "Virtual community events aimed at supporting wellbeing in real-time – meditation, building confidence, tapering off medication support group etc." , website: "www.wellbeingsessions.nz"),
+    Resource(title: "Just a thought", description: "On-line courses to help tackle worry and stress (anxiety, depression, staying on track)" , website: "www.justathought.co.nz"),
+    Resource(title: "Melon", description: "The app provides access to an online community, daily webinars to support mental health and wellbeing, a health journal, tools to check in with yourself about how you’re feeling and podcasts, videos and articles to help you learn more about how you can look after your mental health and wellbeing" , website: "www.melon.com"),
+    Resource(title: "Mentemia", description: "App gives you the ability to monitor, manage and improve your mental health. You can set goals and track progress in much the same way other apps help you to track your physical fitness and health" , website: "www.mentemia.com/nz/home"),
+]
+
+let famfriendsResources = [
     Resource(title: "Mindful", description: "Mindful offers courses, corporate training, personal stories, news-you-can-use, practical advice, directories, and insights that speak to anyone from novice meditators looking for guidance to corporate managers exploring new ways to cultivate workplace engagement and fulfillment.", website: "www.mindful.org"),
     
     Resource(title: "SPARX", description: "SPARX is an interactive self-help online tool that teaches young people skills to help combat depression and anxiety.", website: "www.mindful.org"),
