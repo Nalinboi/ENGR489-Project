@@ -20,36 +20,36 @@ struct HomeView: View {
             ZStack {
                 GradientView(isWalkthroughShowing: $isWalkthroughShowing)
                 VStack {
-                    Text("Clear Skies")
-                        .font(.system(size : 55, weight: .light))
-                        .foregroundColor(.blue)
-                    
-                    
+//                    Text("Clear Skies")
+//                        .font(.system(size : 55, weight: .light))
+//                        .foregroundColor(.blue)
+//
+//
                     Spacer()
-                    HStack {
-                        Button(action: {self.tabSelection = 2}, label: {
-                            Text("Need further resources?")
-                                // .fontWeight(.light)
-                                .padding()
-                                .multilineTextAlignment(.center)
-                                .frame(width: 150, height: 100)
-                                .background(Color.blue.opacity(0.27))
-                                .cornerRadius(12)
-                                .padding(.horizontal)
-                        })
-                        Button(action: {emergencyHelp()}, label: {
-                            Text("Help")
-                                // .fontWeight(.heavy)
-                                .padding()
-                                .multilineTextAlignment(.center)
-                                .frame(width: 150, height: 100)
-                                .background(Color.blue.opacity(0.27))
-                                .cornerRadius(12)
-                                .padding(.horizontal)
-                        })
-                    }
-                    .foregroundColor(.black)
-                    .padding()
+//                    HStack {
+//                        Button(action: {self.tabSelection = 2}, label: {
+//                            Text("Need further resources?")
+//                                // .fontWeight(.light)
+//                                .padding()
+//                                .multilineTextAlignment(.center)
+//                                .frame(width: 150, height: 100)
+//                                .background(Color.blue.opacity(0.27))
+//                                .cornerRadius(12)
+//                                .padding(.horizontal)
+//                        })
+//                        Button(action: {emergencyHelp()}, label: {
+//                            Text("Help")
+//                                // .fontWeight(.heavy)
+//                                .padding()
+//                                .multilineTextAlignment(.center)
+//                                .frame(width: 150, height: 100)
+//                                .background(Color.blue.opacity(0.27))
+//                                .cornerRadius(12)
+//                                .padding(.horizontal)
+//                        })
+//                    }
+//                    .foregroundColor(.black)
+//                    .padding()
                     
                     Spacer()
                     
@@ -162,6 +162,14 @@ struct HomeView: View {
                     Spacer()
                 }
             }
+            .navigationTitle("Walkthroughs")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { emergencyHelp() }, label: {
+                        Text("Help")
+                    })
+                }
+            }
         }
     }
     func emergencyHelp(){
@@ -255,7 +263,7 @@ struct ResourcesView: View {
                             VStack {
                                 Image(systemName: "person.3")
                                     .resizable()
-                                    .frame(width: 60, height: 40)
+                                    .frame(width: 100, height: 50)
                                 //                                .renderingMode(.original)
                                 Text("Family / Friends")
                             }
