@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-var listToGive = overview
+var listToGive = tutorial
 
 
 struct HomeView: View {
@@ -20,39 +20,7 @@ struct HomeView: View {
             ZStack {
                 GradientView(isWalkthroughShowing: $isWalkthroughShowing)
                 VStack {
-//                    Text("Clear Skies")
-//                        .font(.system(size : 55, weight: .light))
-//                        .foregroundColor(.blue)
-//
-//
                     Spacer()
-//                    HStack {
-//                        Button(action: {self.tabSelection = 2}, label: {
-//                            Text("Need further resources?")
-//                                // .fontWeight(.light)
-//                                .padding()
-//                                .multilineTextAlignment(.center)
-//                                .frame(width: 150, height: 100)
-//                                .background(Color.blue.opacity(0.27))
-//                                .cornerRadius(12)
-//                                .padding(.horizontal)
-//                        })
-//                        Button(action: {emergencyHelp()}, label: {
-//                            Text("Help")
-//                                // .fontWeight(.heavy)
-//                                .padding()
-//                                .multilineTextAlignment(.center)
-//                                .frame(width: 150, height: 100)
-//                                .background(Color.blue.opacity(0.27))
-//                                .cornerRadius(12)
-//                                .padding(.horizontal)
-//                        })
-//                    }
-//                    .foregroundColor(.black)
-//                    .padding()
-                    
-                    Spacer()
-                    
                     Group {
                         Text("Waiting in the ").bold() +
                             Text("Emergency Department? ").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/) +
@@ -65,26 +33,11 @@ struct HomeView: View {
                     VStack{
                         HStack {
                             Button(action: {
-                                    // self.tabSelection = 2
                                 listToGive = overview;
                                 goWalkthrough()
                             }, label: {
-                                                        ZStack{
-//                                                            Image("flag")
-//                                                                .resizable()
-//                                                                .frame(width: 60, height: 55)
-//                                                                .opacity(0.33)
-                                                            Text("Emergency Department Walkthrough")
-                                                                .padding()
-                                                                .multilineTextAlignment(.center)
-                                                                .frame(width: 150, height: 100)
-                                                                .background(Color.blue.opacity(0.27))
-                                                                .cornerRadius(12)
-                                                                .padding(.all, 2)
-                                                        }
-                                //                    })
-//                                Text("Overview")
-//                                    // .fontWeight(.light)
+                                Text("Emergency Department Overview")
+                                    // .fontWeight(.heavy)
                                     .padding()
                                     .multilineTextAlignment(.center)
                                     .frame(width: 150, height: 100)
@@ -106,7 +59,7 @@ struct HomeView: View {
                                     .padding(.all, 2)
                             })
                         }
-                        .foregroundColor(.black)
+                        .foregroundColor(.blue)
                         .padding(.all, 2)
                         HStack {
                             Button(action: {
@@ -136,33 +89,37 @@ struct HomeView: View {
                                     .padding(.all, 2)
                             })
                         }
-                        .foregroundColor(.black)
+                        .foregroundColor(.blue)
                         .padding(.all, 2)
                     }
-                    
-                    
-//                    Button(action: {goWalkthrough()}, label: {
-//                        ZStack{
-////                            Image("walkthrough1")
-////                                .resizable()
-////                                .aspectRatio(contentMode: .fit)
-////                                .frame(width: 300)
-////                                .opacity(0.33)
-//                            Text("Emergency Department Walkthrough")
-//                                .fontWeight(.heavy)
-//                                .padding()
-//                                .multilineTextAlignment(.center)
-//                                .frame(width: 340, height: 200)
-//                                .background(Color.blue.opacity(0.5))
-//                                .cornerRadius(12)
-//                                .padding(.horizontal)
-//                        }
-//                    })
                     Spacer()
+                    Group {
+                        Text("Need a ").bold() +
+                            Text("reminder ").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/) +
+                            Text("on how the app works?\n Here's a quick ").bold() +
+                            Text("tutorial").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                    }
+                    .font(.system(size : 18))
+                    .multilineTextAlignment(.center)
+                    Button(action: {
+                        listToGive = tutorial;
+                        goWalkthrough()
+                    }, label: {
+                        Text("App walkthrough")
+                            // .fontWeight(.heavy)
+                            .padding()
+                            .multilineTextAlignment(.center)
+                            .frame(width: 150, height: 100)
+                            .background(Color.blue.opacity(0.27))
+                            .foregroundColor(.blue)
+                            .cornerRadius(12)
+                            .padding(.all, 2)
+                    })
                     Spacer()
                 }
             }
             .navigationTitle("Walkthroughs")
+            .foregroundColor(Color.black)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: { emergencyHelp() }, label: {
@@ -538,7 +495,7 @@ struct GeneralResourceView: View {
             GradientView(isWalkthroughShowing: $isWalkthroughShowing)
             
             List {
-                ForEach(genResources.indices, id: \.self) { index in
+                ForEach(generalResources.indices, id: \.self) { index in
                     
                     Button(action: { emergencyShow(title: genResources[index].title, description: genResources[index].description, website: genResources[index].website) }, label: {
                         VStack(alignment: .leading) {

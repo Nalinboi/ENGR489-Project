@@ -12,7 +12,7 @@ struct AccountButtonView: View {
     
     var body: some View {
         Button(action: { dismiss() }, label: {
-            Text("Go back")
+            Text("Go home")
                 .foregroundColor(.white)
                 .underline()
         })

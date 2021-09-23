@@ -27,7 +27,7 @@ struct WalkthroughView: View {
 
 struct WalkthroughView_Previews: PreviewProvider {
     static var previews: some View {
-        WalkthroughView(isWalkthroughShowing: Binding.constant(true), givenTabs: overview)
+        WalkthroughView(isWalkthroughShowing: Binding.constant(true), givenTabs: tutorial)
     }
 }
  
