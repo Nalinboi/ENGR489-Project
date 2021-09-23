@@ -28,6 +28,7 @@ struct TabDetailsView: View {
                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 .bold()
                 .frame(width:400)
+                .multilineTextAlignment(.center)
             
             Text(givenTabs[index].text)
                 .padding()

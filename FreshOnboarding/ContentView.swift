@@ -497,11 +497,11 @@ struct GeneralResourceView: View {
             List {
                 ForEach(generalResources.indices, id: \.self) { index in
                     
-                    Button(action: { emergencyShow(title: genResources[index].title, description: genResources[index].description, website: genResources[index].website) }, label: {
+                    Button(action: { emergencyShow(title: generalResources[index].title, description: generalResources[index].description, website: generalResources[index].website) }, label: {
                         VStack(alignment: .leading) {
-                                Label(genResources[index].title, systemImage: "house").font(.headline)
+                                Label(generalResources[index].title, systemImage: "house").font(.headline)
                                 Divider()
-                                Label(genResources[index].website, systemImage: "link")
+                                Label(generalResources[index].website, systemImage: "link")
                             }
                         })
                         .padding()

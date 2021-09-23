@@ -28,6 +28,7 @@ struct UrgentHelpView: View {
                         Text(", please \n call ").bold() +
                         Text(" Te Heika").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 }
+                .foregroundColor(.black)
                 .font(.system(size : 18))
                 .multilineTextAlignment(.center)
                 
@@ -55,9 +56,9 @@ struct UrgentHelpView: View {
                 Spacer()
                 
                 Group {
-                    Text("Need someone to ").bold() +
+                    Text("Need someone to ").bold().foregroundColor(.black) +
                         Text("talk to").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/) +
-                        Text("? \n we're here").bold() +
+                        Text("? \n we're here").bold().foregroundColor(.black) +
                         Text(" to help").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 }
                 .font(.system(size : 18))

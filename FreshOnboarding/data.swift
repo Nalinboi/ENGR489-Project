@@ -8,9 +8,10 @@
 import Foundation
 
 let tutorial = [
-    Page(image: "house", title: "Home", text: "The first tab is full of links to walkthrough pages. These walkthroughs will help you with all the information you need about the emergency department."),
-    Page(image: "heart", title: "Resources", text: "In the resources tab, you will be able to get information on any mental health related topic. We have a select range of topics for you to choose from, and from there, you will be able to click on links to other resources."),
-    Page(image: "lightbulb", title: "Tools", text: "The final tab is quite simmilar to the resources tab. We will provide topics, and links for you to choose from. These tools should help you, or someone who is close to you, manage your mental health."),
+    Page(image: "sun.max.fill", title: "Ki Ora!", text: "Kia ora, welcome to Te Pae Tiaki, Wellington Emergency Department!\n\nIt is normal to feel a variety of emotions when turning up for a mental health and/or addiction crisis. Your physical health and mental health are important to us and we endeavour to support you as best as we can.\n\nWait times for an assessment may take some time, so please ask if you need support in any way. Till then, here is a quick walkthrough of the Clear Skies app."),
+    Page(image: "house", title: "Tab 1: Home", text: "The first tab is full of links to walkthrough pages. These walkthroughs will help you with all the information you need about the emergency department (ED).\n\nHere you can gather information of the people, places, and procedures in the ED. There is also a quicker overview, as well as a Clear Skies app tutorial!"),
+    Page(image: "heart", title: "Tab 2: Resources", text: "In the resources tab, you will be able to get information on any mental health related topic. We have a select range of topics for you to choose from, and from there, you will be able to click on links to other resources."),
+    Page(image: "lightbulb", title: "Tab 3: Tools", text: "The final tab is quite simmilar to the resources tab. We will provide topics, and links for you to choose from. These tools should help you, or someone who is close to you, manage your mental health."),
     ]
 
 let overview = [
@@ -40,11 +41,15 @@ let people = [
 ]
 
 let places = [
-    Page(image: "mappin.and.ellipse", title: "Outside the Clinical Treatment Area", text: ""),
-    Page(image: "mappin.and.ellipse", title: "", text: ""),
-    Page(image: "mappin.and.ellipse", title: "", text: ""),
-    Page(image: "mappin.and.ellipse", title: "", text: ""),
-    Page(image: "mappin.and.ellipse", title: "", text: ""),
+    Page(image: "mappin.and.ellipse", title: "Triage assessment window", text: "Shortly after arrival, after you have registered with the administrator, the nurse will call you to the window to assess you. Please ask if you need a private space for this."),
+    Page(image: "mappin.and.ellipse", title: "Triage assessment room", text: "A room off the waiting room where you and the nurse can have a private chat. The nurse might also check your physical health, e. g. blood pressure."),
+    Page(image: "mappin.and.ellipse", title: "Waiting room", text: "People come to ED for various reasons. While we hope to see everyone as quickly as possible, there can be long wait times in ED. We have a large room with many chairs, a water fountain and a snack machine for people while they wait. Triage nurses and administration staff are available for people in the waiting room. If your distress is increasing and you are thinking of leaving ED, please speak to a staff member first."),
+    Page(image: "mappin.and.ellipse", title: "Family/whānau room", text: "A space with armchairs and a couch, has coffee/tea facilities."),
+    Page(image: "mappin.and.ellipse", title: "Cubicle", text: "A private space with a hospital bed, a sink, physical check-up equipment, e. g. blood pressure machine. The entrance to the cubicle has a curtain and/or a sliding door."),
+    Page(image: "mappin.and.ellipse", title: "Corridor", text: "At busy times, some people rest on hospital beds in the corridors while they wait for further assessment and treatment. Doctors and nurses will regularly check in."),
+    Page(image: "mappin.and.ellipse", title: "Emergency Department Observation Unit (EDOU)", text: "The EDOU is a 10 bed unit adjacent to the Emergency Department. Most people -are discharged home within 24 hours."),
+    Page(image: "mappin.and.ellipse", title: "Crisis Respite and Recovery House", text: "Based in the community, the respite and recovery services offer a welcoming place where people experiencing mental health and/or addiction difficulties can rest and recover in a home-like environment. There are well trained staff available 24 hours a day. The length of stay is flexible, but usually people stay at respite for 2 or 3 days."),
+    Page(image: "mappin.and.ellipse", title: "Inpatient ward", text: "If you need to stay in hospital, you might be admitted to a medical ward, such as the Medical Assessment and Planning Unit (MAPU) or to a mental health ward, such as Te Whare O Matairangi (Matairangi) in Wellington or Te Whare Ahuru (Ahuru) in Lower Hutt. The aim is support your recovery by providing the best possible clinical care in a respectful, supportive, safe and caring environment."),
     
 ]
 
