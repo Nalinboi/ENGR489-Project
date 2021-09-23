@@ -68,11 +68,7 @@ let mhresources = [
     Resource(title: "Anxiety.org", description: "Free, information and advice about managing anxiety and stress" , website: "https://www.anxiety.org.nz/"),
 ]
 
-let mindfulnessTools = [
-    Resource(title: "Mindful", description: "Mindful offers courses, corporate training, personal stories, news-you-can-use, practical advice, directories, and insights that speak to anyone from novice meditators looking for guidance to corporate managers exploring new ways to cultivate workplace engagement and fulfillment.", website: "www.mindful.org"),
-    
-    Resource(title: "SPARX", description: "SPARX is an interactive self-help online tool that teaches young people skills to help combat depression and anxiety.", website: "www.mindful.org"),
-    
+let mindfulnessTools = [   
     Resource(title: "Clearhead", description: "We provide you with specific and helpful resources for a range of situations we can all find ourselves in. We offer links to relevant websites, information sheets, books, videos and local support services to help with a wide range of mental health situations. Whatever you need help with, you will find something of value within our app and website." , website: "www.clearhead.org.nz"),
     Resource(title: "All Right", description: "About being your best, coping in touch times, parenting and whānau, tea o Māori practice, identity and culture, workplace wellbeing, connecting with others" , website: "www.allright.org.nz"),
     Resource(title: "Changing Minds", description: "Virtual community events aimed at supporting wellbeing in real-time – meditation, building confidence, tapering off medication support group etc." , website: "www.wellbeingsessions.nz"),
@@ -104,16 +100,21 @@ let anxdepResources = [
 ]
 
 let youthResources = [
-    Resource(title: "Mindful", description: "Mindful offers courses, corporate training, personal stories, news-you-can-use, practical advice, directories, and insights that speak to anyone from novice meditators looking for guidance to corporate managers exploring new ways to cultivate workplace engagement and fulfillment.", website: "www.mindful.org"),
-    
-    Resource(title: "SPARX", description: "SPARX is an interactive self-help online tool that teaches young people skills to help combat depression and anxiety.", website: "www.mindful.org"),
-    
-    Resource(title: "Clearhead", description: "We provide you with specific and helpful resources for a range of situations we can all find ourselves in. We offer links to relevant websites, information sheets, books, videos and local support services to help with a wide range of mental health situations. Whatever you need help with, you will find something of value within our app and website." , website: "www.clearhead.org.nz"),
-    Resource(title: "All Right", description: "About being your best, coping in touch times, parenting and whānau, tea o Māori practice, identity and culture, workplace wellbeing, connecting with others" , website: "www.allright.org.nz"),
-    Resource(title: "Changing Minds", description: "Virtual community events aimed at supporting wellbeing in real-time – meditation, building confidence, tapering off medication support group etc." , website: "www.wellbeingsessions.nz"),
-    Resource(title: "Just a thought", description: "On-line courses to help tackle worry and stress (anxiety, depression, staying on track)" , website: "www.justathought.co.nz"),
-    Resource(title: "Melon", description: "The app provides access to an online community, daily webinars to support mental health and wellbeing, a health journal, tools to check in with yourself about how you’re feeling and podcasts, videos and articles to help you learn more about how you can look after your mental health and wellbeing" , website: "www.melon.com"),
-    Resource(title: "Mentemia", description: "App gives you the ability to monitor, manage and improve your mental health. You can set goals and track progress in much the same way other apps help you to track your physical fitness and health" , website: "www.mentemia.com/nz/home"),
+    Resource(title: "Alcohol and Drug Youth Line", description: "Free, confidential support and guidance, to talk to you about your own drinking or drug use or about another person’s drinking or drug use", website: "https://alcoholdrughelp.org.nz/helpline/services/youth-helpline/"),
+    Resource(title: "Aroha Chatbot", description: "Help for young people (13-24 years) cope with stress during Covid-19; evidence-based tools for managing stress, practical ideas to maintain social connection, and to stay active and well through youth-friendly digital activities.", website: "https://www.healthnavigator.org.nz/apps/a/aroha-chatbot/"),
+    Resource(title: "Aunty Dee", description: "Aims to help people work through problems by encouraging users to think about, reflect and explore their problems in a structured way. Aimed at Pacific and Māori young people aged 14-25 years. Website includes information on sleeping, relationships, friends, health and school.", website: "https://www.auntydee.co.nz/"),
+    Resource(title: "Bounce", description: "Tips, ideas and inspiration to help you live life well; youth-led project developed by New Zealand Red Cross; for young people & by young people", website: "http://bounce.org.nz"),
+    Resource(title: "Evolve", description: "Youth One Stop Shop (YOSS) delivering integrated primary health care and social support services to young people age 10-24 years old in the Wellington region. Team of doctors, nurse practitioners, nurses, counsellors, social workers, youth workers and admin staff.", website: "https://www.evolveyouth.org.nz/"),
+    Resource(title: "Kidsline", description: "For children and young people, up to 18 years; to help, support and empower the children of New Zealand", website: "http://www.kidsline.org.nz"),
+    Resource(title: "Kapiti Youth Support", description: "Youth One Stop Shop (YOSS). Medical and nursing services, sexual health, clinical psychology, counselling, alcohol and drug services, social work, mentoring, parenting, peer support, transition to work, youth development, education programmes and therapeutic groups. All of our services are available free to Kapiti young people aged between 10 and 24 years.", website: "https://kys.co.nz"),
+    Resource(title: "Odyssey", description: "To support rangatahi find a way through some of the tough stuff, for people living with drug, alcohol and other addiction challenges", website: "https://www.odyssey.org.nz/our-services/rangatahi"),
+    Resource(title: "SPARX", description: "Helps young people learn skills to deal with feeling down, depressed or stressed, proven benefit in people aged 12-19", website: "https://www.sparx.org.nz"),
+    Resource(title: "Te Rau Ora", description: "Support for Māori rangatahi", website: "https://terauora.com/our-work/rangatahi/"),
+    Resource(title: "The Lowdown", description: "Free 24/7 helpline, to help young New Zealanders recognise and understand depression or anxiety", website: "https://www.thelowdown.co.nz"),
+    Resource(title: "Vibe", description: "Youth One Stop Shop (YOSS). Free, confidential health and support services for Hutt Valley young people aged 10 – 24", website: "https://www.vibe.org.nz"),
+    Resource(title: "What's Up", description: "Free, nationally-available counselling helpline and webchat service for children and teenagers (5–18 years), run by Barnardos NZ", website: "https://www.whatsup.co.nz"),
+    Resource(title: "Youthline", description: "We were established to ensure young people know where to get help and can access support when they need it", website: "https://www.youthline.co.nz/"),
+    Resource(title: "", description: "", website: ""),
 ]
 
 let helplinesResources = [
