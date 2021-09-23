@@ -118,7 +118,7 @@ struct HomeView: View {
                     Spacer()
                 }
             }
-            .navigationTitle("Walkthroughs")
+            .navigationTitle("Home")
             .foregroundColor(Color.black)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
