@@ -2,7 +2,7 @@
 //  ButtonsView.swift
 //  FreshOnboarding
 //
-//  Created by simon on 22/06/21.
+//  Created by Nalin on 22/06/21.
 //
 
 import SwiftUI
@@ -19,7 +19,7 @@ struct ButtonsView: View {
                     Text(buttonLabel)
                         .fontWeight(.heavy)
                         .padding()
-                        .frame(width: 150, height: 44)
+                        .frame(width: 150, height: 55)
                         .background(Color.black.opacity(0.27))
                         .cornerRadius(12)
                         .padding(.horizontal)

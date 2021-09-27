@@ -2,7 +2,7 @@
 //  FreshOnboardingTests.swift
 //  FreshOnboardingTests
 //
-//  Created by simon on 22/06/21.
+//  Created by Nalin on 22/06/21.
 //
 
 import XCTest

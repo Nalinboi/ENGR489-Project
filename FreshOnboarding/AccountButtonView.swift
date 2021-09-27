@@ -2,7 +2,7 @@
 //  AccountButtonView.swift
 //  FreshOnboarding
 //
-//  Created by simon on 23/06/21.
+//  Created by Nalin on 23/06/21.
 //
 
 import SwiftUI

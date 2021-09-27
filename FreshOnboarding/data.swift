@@ -2,13 +2,13 @@
 //  data.swift
 //  FreshOnboarding
 //
-//  Created by simon on 22/06/21.
+//  Created by Nalin on 22/06/21.
 //
 
 import Foundation
 
 let tutorial = [
-    Page(image: "sun.max.fill", title: "Ki Ora!", text: "Kia ora, welcome to Te Pae Tiaki, Wellington Emergency Department!\n\nIt is normal to feel a variety of emotions when turning up for a mental health and/or addiction crisis. Your physical health and mental health are important to us and we endeavour to support you as best as we can.\n\nWait times for an assessment may take some time, so please ask if you need support in any way. Till then, here is a quick walkthrough of the Clear Skies app."),
+    Page(image: "sun.max.fill", title: "Kia Ora!", text: "Kia ora, welcome to Te Pae Tiaki, Wellington Emergency Department!\n\nIt is normal to feel a variety of emotions when turning up for a mental health and/or addiction crisis. Your physical health and mental health are important to us and we endeavour to support you as best as we can.\n\nWait times for an assessment may take some time, so please ask if you need support in any way. Till then, here is a quick walkthrough of the Clear Skies app."),
     Page(image: "house", title: "Tab 1: Home", text: "The first tab is full of links to walkthrough pages. These walkthroughs will help you with all the information you need about the emergency department (ED).\n\nHere you can gather information of the people, places, and procedures in the ED. There is also a quicker overview, as well as a Clear Skies app tutorial!"),
     Page(image: "heart", title: "Tab 2: Resources", text: "In the resources tab, you will be able to get information on any mental health related topic. We have a select range of topics for you to choose from, and from there, you will be able to click on links to other resources."),
     Page(image: "lightbulb", title: "Tab 3: Tools", text: "The final tab is quite simmilar to the resources tab. We will provide topics, and links for you to choose from. These tools should help you, or someone who is close to you, manage your mental health."),
