@@ -17,7 +17,8 @@ struct WalkthroughView: View {
             GradientView(isWalkthroughShowing: $isWalkthroughShowing)
             VStack {
                 PageTabView(selection: $selection, givenTabs: givenTabs)
-                ButtonsView(selection: $selection, givenTabs: givenTabs)
+                ButtonsView(selection: $selection, isWalkthroughShowing: $isWalkthroughShowing,
+                            givenTabs: givenTabs)
                 AccountButtonView(isWalkthroughShowing: $isWalkthroughShowing)
             }
         }

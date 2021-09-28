@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ButtonsView: View {
     @Binding var selection: Int
+    @Binding var isWalkthroughShowing: Bool
+
     let buttons = ["Previous", "Next"]
     let givenTabs: Array<Page>
     
@@ -60,13 +62,22 @@ struct ButtonsView: View {
                 selection -= 1
             } else if buttonLabel == "Next" && selection < givenTabs.count - 1 {
                 selection += 1
+            } else if (selection == givenTabs.count - 1) {
+                dismiss()
             }
+        }
+    }
+    
+    func dismiss(){
+        withAnimation {
+            isWalkthroughShowing.toggle()
         }
     }
 }
 
 struct ButtonsView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonsView(selection: Binding.constant(0), givenTabs: overview)
+        ButtonsView(selection: Binding.constant(0), isWalkthroughShowing: Binding.constant(true), givenTabs: overview)
     }
 }
+
