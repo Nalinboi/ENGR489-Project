@@ -95,7 +95,6 @@ let anxdepResources = [
     Resource(title: "All Right", description: "About being your best, coping in touch times, parenting and whānau, tea o Māori practice, identity and culture, workplace wellbeing, connecting with others" , website: "www.allright.org.nz"),
     Resource(title: "Changing Minds", description: "Virtual community events aimed at supporting wellbeing in real-time – meditation, building confidence, tapering off medication support group etc." , website: "www.wellbeingsessions.nz"),
     Resource(title: "Just a thought", description: "On-line courses to help tackle worry and stress (anxiety, depression, staying on track)" , website: "www.justathought.co.nz"),
-    Resource(title: "Melon", description: "The app provides access to an online community, daily webinars to support mental health and wellbeing, a health journal, tools to check in with yourself about how you’re feeling and podcasts, videos and articles to help you learn more about how you can look after your mental health and wellbeing" , website: "www.melon.com"),
     Resource(title: "Mentemia", description: "App gives you the ability to monitor, manage and improve your mental health. You can set goals and track progress in much the same way other apps help you to track your physical fitness and health" , website: "www.mentemia.com/nz/home"),
 ]
 
@@ -117,42 +116,61 @@ let youthResources = [
 ]
 
 let helplinesResources = [
-    Resource(title: "Mindful", description: "Mindful offers courses, corporate training, personal stories, news-you-can-use, practical advice, directories, and insights that speak to anyone from novice meditators looking for guidance to corporate managers exploring new ways to cultivate workplace engagement and fulfillment.", website: "www.mindful.org"),
+    Resource(title: "Lifeline Aotearoa", description: "0800 543 354 (0800 LIFELINE) or free text 4357 (HELP) Helping people in crisis", website: "https://www.lifeline.org.nz/"),
     
-    Resource(title: "SPARX", description: "SPARX is an interactive self-help online tool that teaches young people skills to help combat depression and anxiety.", website: "www.mindful.org"),
-    
-    Resource(title: "Clearhead", description: "We provide you with specific and helpful resources for a range of situations we can all find ourselves in. We offer links to relevant websites, information sheets, books, videos and local support services to help with a wide range of mental health situations. Whatever you need help with, you will find something of value within our app and website." , website: "www.clearhead.org.nz"),
-    Resource(title: "All Right", description: "About being your best, coping in touch times, parenting and whānau, tea o Māori practice, identity and culture, workplace wellbeing, connecting with others" , website: "www.allright.org.nz"),
-    Resource(title: "Changing Minds", description: "Virtual community events aimed at supporting wellbeing in real-time – meditation, building confidence, tapering off medication support group etc." , website: "www.wellbeingsessions.nz"),
-    Resource(title: "Just a thought", description: "On-line courses to help tackle worry and stress (anxiety, depression, staying on track)" , website: "www.justathought.co.nz"),
-    Resource(title: "Melon", description: "The app provides access to an online community, daily webinars to support mental health and wellbeing, a health journal, tools to check in with yourself about how you’re feeling and podcasts, videos and articles to help you learn more about how you can look after your mental health and wellbeing" , website: "www.melon.com"),
-    Resource(title: "Mentemia", description: "App gives you the ability to monitor, manage and improve your mental health. You can set goals and track progress in much the same way other apps help you to track your physical fitness and health" , website: "www.mentemia.com/nz/home"),
+    Resource(title: "Mental Health Foundation", description: "List of NZ services/helplines for mental health support, information and help", website: "https://mentalhealth.org.nz/helplines"),
+
+    Resource(title: "Need to talk?", description: "free call or text 1737, 24/7 Provides support, option to talk to someone with lived experience of wairangi/mental distress who is trained to provide tautoko/ support", website: "https://1737.org.nz/"),
+
+    Resource(title: "Suicide Crisis Helpline", description: "0508 828 865 (0508 TAUTOKO), free, 24/7 Call for support if you or someone you know, may be thinking about suicide", website: "https://www.lifeline.org.nz/services/suicide-crisis-helpline"),
+
+
+//    Wellington Warmline https://www.mindfitnz.co.nz/support-vendor/wellington-warmline/ Free 0800 200 207; 7pm–1am, Tue- Sun Telephone peer support service for people experiencing mental illness or those supporting them
+//
+//    Are you ok http://www.areyouok.org.nz/ 0800 456 450 family violence helpline; 9am–11pm daily Help and support for people who experience family violence
+//
+//    Rape Crisis http://www.rapecrisisnz.org.nz/ 0800 883 300 For support after rape or sexual assault
+//
+//    Safe to talk https://safetotalk.nz/ 0800 044 334, text 4334; 24/7 Sexual Harm Helpline, confidential
+//
+//    He waka tapu https://www.hewakatapu.org.nz/services/0800-hey-bro 0800 hey bro (439 276), 24/7 helpline For men who feel they're going to harm a loved one or whānau member
 ]
 
 let identityResources = [
-    Resource(title: "Mindful", description: "Mindful offers courses, corporate training, personal stories, news-you-can-use, practical advice, directories, and insights that speak to anyone from novice meditators looking for guidance to corporate managers exploring new ways to cultivate workplace engagement and fulfillment.", website: "www.mindful.org"),
+    Resource(title: "Outline NZ", description: "0800 688 5463 (OUTLINE) available evenings from 6pm–9pm Confidential telephone support for people in the LGBTQIA+ community.", website: "https://outline.org.nz/"),
+
+    Resource(title: "Rainbow Youth", description: "(09) 376 4155 Free 1:1 peer support for LGBTI+ young people, their friends and whānau; information and resources", website: "https://ry.org.nz/"),
     
-    Resource(title: "SPARX", description: "SPARX is an interactive self-help online tool that teaches young people skills to help combat depression and anxiety.", website: "www.mindful.org"),
+    Resource(title: "Inside Out", description: "027 331 4507 Provide resources, information, workshops, consulting and support for anything concerning rainbow or LGBTQIA+ issues and education for schools, workplaces and community organisations. Offer support in schools, have peer support and volunteer programmes for Rainbow youth", website: "tps://insideout.org.nz/"),
     
-    Resource(title: "Clearhead", description: "We provide you with specific and helpful resources for a range of situations we can all find ourselves in. We offer links to relevant websites, information sheets, books, videos and local support services to help with a wide range of mental health situations. Whatever you need help with, you will find something of value within our app and website." , website: "www.clearhead.org.nz"),
-    Resource(title: "All Right", description: "About being your best, coping in touch times, parenting and whānau, tea o Māori practice, identity and culture, workplace wellbeing, connecting with others" , website: "www.allright.org.nz"),
-    Resource(title: "Changing Minds", description: "Virtual community events aimed at supporting wellbeing in real-time – meditation, building confidence, tapering off medication support group etc." , website: "www.wellbeingsessions.nz"),
-    Resource(title: "Just a thought", description: "On-line courses to help tackle worry and stress (anxiety, depression, staying on track)" , website: "www.justathought.co.nz"),
-    Resource(title: "Melon", description: "The app provides access to an online community, daily webinars to support mental health and wellbeing, a health journal, tools to check in with yourself about how you’re feeling and podcasts, videos and articles to help you learn more about how you can look after your mental health and wellbeing" , website: "www.melon.com"),
-    Resource(title: "Mentemia", description: "App gives you the ability to monitor, manage and improve your mental health. You can set goals and track progress in much the same way other apps help you to track your physical fitness and health" , website: "www.mentemia.com/nz/home"),
+    Resource(title: "Outerspaces", description: "021 088 16153 Support and empower young people with diverse genders and sexualities in the wider Wellington Region through advocacy, development, education, and community. After school groups Wellington Central and Lower Hutt 1 - School’s Out : Support and social group for LGBTQI+ young people, aged 12 to 18 2- Tranzform: Support and social group for gender diverse young people, aged 15 to 30, who identify as transgender, fa’afafine, whakawhine, tangata ira tane, intersex, two-spirits, genderqueer, non-gendered, questioning and their allies", website: "https://www.outerspaces.org.nz/"),
+    
+    Resource(title: "Gender Minorities Aotearoa", description: "Ph: 04 385 0611 M: 020 404 92568 Run by and for transgender people. Offers information, advocacy, and wrap around support for transgender people of all ages, ethnicities, and backgrounds. Their services can be accessed by either contacting them via phone/email or attending a Community Drop In: 10.30 – 5.30 Weds and Thurs in Newtown.", website: "https://genderminorities.com/"),
 ]
 
 let famfriendsResources = [
-    Resource(title: "Mindful", description: "Mindful offers courses, corporate training, personal stories, news-you-can-use, practical advice, directories, and insights that speak to anyone from novice meditators looking for guidance to corporate managers exploring new ways to cultivate workplace engagement and fulfillment.", website: "www.mindful.org"),
-    
-    Resource(title: "SPARX", description: "SPARX is an interactive self-help online tool that teaches young people skills to help combat depression and anxiety.", website: "www.mindful.org"),
-    
-    Resource(title: "Clearhead", description: "We provide you with specific and helpful resources for a range of situations we can all find ourselves in. We offer links to relevant websites, information sheets, books, videos and local support services to help with a wide range of mental health situations. Whatever you need help with, you will find something of value within our app and website." , website: "www.clearhead.org.nz"),
-    Resource(title: "All Right", description: "About being your best, coping in touch times, parenting and whānau, tea o Māori practice, identity and culture, workplace wellbeing, connecting with others" , website: "www.allright.org.nz"),
-    Resource(title: "Changing Minds", description: "Virtual community events aimed at supporting wellbeing in real-time – meditation, building confidence, tapering off medication support group etc." , website: "www.wellbeingsessions.nz"),
-    Resource(title: "Just a thought", description: "On-line courses to help tackle worry and stress (anxiety, depression, staying on track)" , website: "www.justathought.co.nz"),
-    Resource(title: "Melon", description: "The app provides access to an online community, daily webinars to support mental health and wellbeing, a health journal, tools to check in with yourself about how you’re feeling and podcasts, videos and articles to help you learn more about how you can look after your mental health and wellbeing" , website: "www.melon.com"),
-    Resource(title: "Mentemia", description: "App gives you the ability to monitor, manage and improve your mental health. You can set goals and track progress in much the same way other apps help you to track your physical fitness and health" , website: "www.mentemia.com/nz/home"),
+    Resource(title: "Able", description: "MiHelping people with mental illness and their families and whānau get the most out of life. Resources packs, information.", website: "http://www.able.org.nz/"),
+    Resource(title: "Asian Family Services", description: "0800 862 342, Mon - Fri 9am-8pm help@asianfamilyservices.nz Office: Mon - Fri 9am-5pm Professional, confidential, nationwide face-to-face, video-conferencing or telephone counselling and social work support to all Asians living in New Zealand.", website: "https://www.asianfamilyservices.nz/"),
+    Resource(title: "Atareira", description: "04 499 1049 enquiries@atareira.org.nz, Mental Health & Addiction Support for Family Whānau, Transitional Housing.", website: "https://www.atareira.org.nz/"),
+    Resource(title: "EDANZ", description: "00 2 EDANZ or 0800 233 269, in Auckland 09 522 2679, or email info@ed.org.nz. Improving outcomes for people with eating disorders and their families.", website: "https://www.ed.org.nz/"),
+
+    Resource(title: "Family Drug Support Aotearoa NZ", description: "0800 FDSupport or 0800 337877 Assisting families/whānau & friends to deal with alcohol and other drug misuse in a way that strengthens relationships and achieves positive outcomes.", website: "https://www.fds.org.nz"),
+
+
+//
+//    Family Drug Support Aotearoa NZ www.fds.org.nz 0800 FDSupport or 0800 337877 Assisting families/whānau & friends to deal with alcohol and other drug misuse in a way that strengthens relationships and achieves positive outcomes
+//
+//    Family Services Directory https://www.familyservices.govt.nz/directory/ For help finding (and direct transfer to) community based health and social support services in your area
+//
+//    LeVa https://www.leva.co.nz/rebuilding-wellbeing/ Fact sheets on how to support someone who may be experiencing depression and/or anxiety downloadable in English, Samoan, Tongan, Cook Islands and Fijian
+//
+//    Parent Help https://www.parenthelp.org.nz/ 0800 568 856 available 9am-9pm Parents/whānau seeking support, advice and practical strategies on all parenting concerns. Anonymous, non-judgemental and confidential. Affordable counselling - via Zoom, phone or F2F in Wellington
+//
+//    Skylight https://www.skylight.org.nz/ 0800 299 100; 9am–5pm weekdays For support through trauma, loss and grief
+//
+//    Taeaomanino Trust https://www.taeaomanino.org.nz/ 0800 345 345 Social and mental health services, counselling support to Pacific families, Porirua and greater Wellington
+//
+//    Yellow Brick Road https://yellowbrickroad.org.nz/ National organisation that provides support for whānau who have a
 ]
 
 struct Page {

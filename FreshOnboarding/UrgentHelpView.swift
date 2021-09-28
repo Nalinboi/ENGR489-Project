@@ -26,7 +26,7 @@ struct UrgentHelpView: View {
                     Text("If this is an ").bold() +
                         Text("emergency").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/) +
                         Text(", please \n call ").bold() +
-                        Text(" Te Heika").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Text(" Te Haika").bold().foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 }
                 .foregroundColor(.black)
                 .font(.system(size : 18))

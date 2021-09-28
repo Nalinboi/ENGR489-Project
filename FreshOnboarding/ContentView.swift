@@ -597,7 +597,7 @@ struct HelplinesView: View {
             }
         
         }
-        .navigationTitle("Youth")
+        .navigationTitle("Helplines")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: { emergencyHelp() }, label: {
@@ -745,7 +745,7 @@ struct FamilyFriendsView: View {
             }
         
         }
-        .navigationTitle("Identity")
+        .navigationTitle("Family / Friends")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: { emergencyHelp() }, label: {
