@@ -2,7 +2,7 @@
 //  ButtonsView.swift
 //  FreshOnboarding
 //
-//  Created by Nalin on 22/06/21.
+//  Created by simon on 22/06/21.
 //
 
 import SwiftUI
@@ -14,16 +14,40 @@ struct ButtonsView: View {
     
     var body: some View {
         HStack {
-            ForEach (buttons, id: \.self) {buttonLabel in
-                Button(action: {buttonAction(buttonLabel)}, label: {
-                    Text(buttonLabel)
-                        .fontWeight(.heavy)
-                        .padding()
-                        .frame(width: 150, height: 55)
-                        .background(Color.black.opacity(0.27))
-                        .cornerRadius(12)
-                        .padding(.horizontal)
-                })
+            ForEach (buttons, id: \.self) { buttonLabel in
+                Group {
+                    if (selection == 0 && buttonLabel == "Previous") {
+                        Button(action: {buttonAction(buttonLabel)}, label: {
+                            Text("")
+                                .fontWeight(.heavy)
+                                .padding()
+                                .frame(width: 150, height: 55)
+                                .background(Color.black.opacity(0.0))
+                                .cornerRadius(12)
+                                .padding(.horizontal)
+                        })
+                    } else if (selection == givenTabs.count - 1 && buttonLabel == "Next") {
+                        Button(action: {buttonAction(buttonLabel)}, label: {
+                            Text("Finish")
+                                .fontWeight(.heavy)
+                                .padding()
+                                .frame(width: 150, height: 55)
+                                .background(Color.blue.opacity(0.5))
+                                .cornerRadius(12)
+                                .padding(.horizontal)
+                        })
+                    } else {
+                        Button(action: {buttonAction(buttonLabel)}, label: {
+                            Text(buttonLabel)
+                                .fontWeight(.heavy)
+                                .padding()
+                                .frame(width: 150, height: 55)
+                                .background(Color.black.opacity(0.27))
+                                .cornerRadius(12)
+                                .padding(.horizontal)
+                        })
+                    }
+                }
             }
         }
         .foregroundColor(.white)
