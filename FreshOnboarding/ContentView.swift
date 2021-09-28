@@ -36,27 +36,37 @@ struct HomeView: View {
                                 listToGive = overview;
                                 goWalkthrough()
                             }, label: {
-                                Text("Emergency Department Overview")
-                                    // .fontWeight(.heavy)
-                                    .padding()
-                                    .multilineTextAlignment(.center)
-                                    .frame(width: 150, height: 100)
-                                    .background(Color.blue.opacity(0.27))
-                                    .cornerRadius(12)
-                                    .padding(.all, 2)
+                                VStack {
+                                    Image(systemName: "magnifyingglass")
+                                        .resizable()
+                                        .frame(width: 40, height: 40)
+                                    //                                .renderingMode(.original)
+                                    Text("Emergency Department Overview")
+                                }
+                                .padding()
+                                .multilineTextAlignment(.center)
+                                .frame(width: 175, height: 150)
+                                .background(Color.blue.opacity(0.27))
+                                .cornerRadius(12)
+                                .padding(.all, 2)
                             })
                             Button(action: {
                                 listToGive = people;
                                 goWalkthrough()
                             }, label: {
-                                Text("People")
-                                    // .fontWeight(.heavy)
-                                    .padding()
-                                    .multilineTextAlignment(.center)
-                                    .frame(width: 150, height: 100)
-                                    .background(Color.blue.opacity(0.27))
-                                    .cornerRadius(12)
-                                    .padding(.all, 2)
+                                VStack {
+                                    Image(systemName: "person.3")
+                                        .resizable()
+                                        .frame(width: 80, height: 40)
+                                    //                                .renderingMode(.original)
+                                    Text("People")
+                                }
+                                .padding()
+                                .multilineTextAlignment(.center)
+                                .frame(width: 175, height: 150)
+                                .background(Color.blue.opacity(0.27))
+                                .cornerRadius(12)
+                                .padding(.all, 2)
                             })
                         }
                         .foregroundColor(.blue)
@@ -66,27 +76,37 @@ struct HomeView: View {
                                 listToGive = places;
                                 goWalkthrough()
                             }, label: {
-                                Text("Places")
-                                    // .fontWeight(.light)
-                                    .padding()
-                                    .multilineTextAlignment(.center)
-                                    .frame(width: 150, height: 100)
-                                    .background(Color.blue.opacity(0.27))
-                                    .cornerRadius(12)
-                                    .padding(.all, 2)
+                                VStack {
+                                    Image(systemName: "mappin.and.ellipse")
+                                        .resizable()
+                                        .frame(width: 40, height: 40)
+                                    //                                .renderingMode(.original)
+                                    Text("Places")
+                                }
+                                .padding()
+                                .multilineTextAlignment(.center)
+                                .frame(width: 175, height: 150)
+                                .background(Color.blue.opacity(0.27))
+                                .cornerRadius(12)
+                                .padding(.all, 2)
                             })
                             Button(action: {
                                 listToGive = procedures;
                                 goWalkthrough()
                             }, label: {
-                                Text("Procedures")
-                                    // .fontWeight(.heavy)
-                                    .padding()
-                                    .multilineTextAlignment(.center)
-                                    .frame(width: 150, height: 100)
-                                    .background(Color.blue.opacity(0.27))
-                                    .cornerRadius(12)
-                                    .padding(.all, 2)
+                                VStack {
+                                    Image(systemName: "list.dash")
+                                        .resizable()
+                                        .frame(width: 40, height: 40)
+                                    //                                .renderingMode(.original)
+                                    Text("Procedures")
+                                }
+                                .padding()
+                                .multilineTextAlignment(.center)
+                                .frame(width: 175, height: 150)
+                                .background(Color.blue.opacity(0.27))
+                                .cornerRadius(12)
+                                .padding(.all, 2)
                             })
                         }
                         .foregroundColor(.blue)
@@ -105,15 +125,21 @@ struct HomeView: View {
                         listToGive = tutorial;
                         goWalkthrough()
                     }, label: {
-                        Text("App walkthrough")
-                            // .fontWeight(.heavy)
-                            .padding()
-                            .multilineTextAlignment(.center)
-                            .frame(width: 150, height: 100)
-                            .background(Color.blue.opacity(0.27))
-                            .foregroundColor(.blue)
-                            .cornerRadius(12)
-                            .padding(.all, 2)
+                        VStack {
+                            Image(systemName: "questionmark.circle")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                            //                                .renderingMode(.original)
+                            Text("App walkthrough")
+                        }
+                        .padding()
+                        .multilineTextAlignment(.center)
+                        .frame(width: 175, height: 150)
+                        .background(Color.blue.opacity(0.27))
+                        .cornerRadius(12)
+                        .padding(.all, 2)
+                        .foregroundColor(.blue)
+                        
                     })
                     Spacer()
                 }

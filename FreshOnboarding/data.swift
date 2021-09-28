@@ -54,7 +54,7 @@ let places = [
 ]
 
 let procedures = [
-    Page(image: "bell", title: "we are making procedures...", text: "procedures to come "),
+    Page(image: "bell", title: "We are making procedures...", text: "Procedures to come "),
 ]
 
 let mhresources = [
@@ -114,7 +114,6 @@ let youthResources = [
     Resource(title: "Vibe", description: "Youth One Stop Shop (YOSS). Free, confidential health and support services for Hutt Valley young people aged 10 – 24", website: "https://www.vibe.org.nz"),
     Resource(title: "What's Up", description: "Free, nationally-available counselling helpline and webchat service for children and teenagers (5–18 years), run by Barnardos NZ", website: "https://www.whatsup.co.nz"),
     Resource(title: "Youthline", description: "We were established to ensure young people know where to get help and can access support when they need it", website: "https://www.youthline.co.nz/"),
-    Resource(title: "", description: "", website: ""),
 ]
 
 let helplinesResources = [
