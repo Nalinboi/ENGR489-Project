@@ -88,58 +88,58 @@
 ### Week 4 (27th July 2021 - Tuesday 10am)
 | Questions      | Answers |
 | ----------- | ----------- |
-| What action points were agreed for the next meeting.                   | Text |
+| What action points were agreed for the next meeting.                   | Continuing to refine our product and to filter what is unnecceary. Also to work on the report. |
 | What action points were achieved since the last meeting.               | Had improved on the application further, had also gotten rid of the Notes tab, as was suggested by stakeholders to simplify the application |
-| A statement on any action points not achieved since the last meeting.  | Text |
+| A statement on any action points not achieved since the last meeting.  | Had not done much report writing due to other assignments.  |
 
 ### Week 5 (10th August 2021 - Tuesday 10am)
 | Questions      | Answers |
 | ----------- | ----------- |
-| What action points were agreed for the next meeting.                   | Text |
-| What action points were achieved since the last meeting.               | Text |
-| A statement on any action points not achieved since the last meeting.  | Text |
+| What action points were agreed for the next meeting.                   | Break is next week. But just looking at the usability testing, and also looking to improve the product to a testable point. |
+| What action points were achieved since the last meeting.               | Had improved the product and the walkthroughs are looking really nice. |
+| A statement on any action points not achieved since the last meeting.  | Had not worked on the report |
 
 ## Mid Trimester break (16th-29th August)
 **Important to note: Lockdown Level 4/3 from 18th August - 8th September (Level 2)**
 ### Week 6 (24th August 2021 - Tuesday 10am)
 | Questions      | Answers |
 | ----------- | ----------- |
-| What action points were agreed for the next meeting.                   | Text |
-| What action points were achieved since the last meeting.               | Text |
-| A statement on any action points not achieved since the last meeting.  | Text |
+| What action points were agreed for the next meeting.                   | Cannot do anything apart from the report |
+| What action points were achieved since the last meeting.               | Was not able to do anything since lockdown |
+| A statement on any action points not achieved since the last meeting.  | Was not able to do anything since lockdown |
 
 ### Week 7 (31st August 2021 - Tuesday 10am)
 | Questions      | Answers |
 | ----------- | ----------- |
-| What action points were agreed for the next meeting.                   | Text |
+| What action points were agreed for the next meeting.                   | Was not able to do anything since lockdown |
 | What action points were achieved since the last meeting.               | After months of refinement, ethics was finally approved. We can now do usability evaluations. |
-| A statement on any action points not achieved since the last meeting.  | Text |
+| A statement on any action points not achieved since the last meeting.  | Nothing was expected to be done |
 
 ### Week 8 (7th September 2021 - Tuesday 10am)
 | Questions      | Answers |
 | ----------- | ----------- |
-| What action points were agreed for the next meeting.                   | Text |
-| What action points were achieved since the last meeting.               | Text |
-| A statement on any action points not achieved since the last meeting.  | Text |
+| What action points were agreed for the next meeting.                   | After coming out of lockdown, improving the application so that it can be tested now that the ethics were approved |
+| What action points were achieved since the last meeting.               | Was not able to do anything since lockdown |
+| A statement on any action points not achieved since the last meeting.  | Was not able to do anything since lockdown |
 
 ### Week 9 (14th September 2021 - Tuesday 10am)
 | Questions      | Answers |
 | ----------- | ----------- |
-| What action points were agreed for the next meeting.                   | Text |
-| What action points were achieved since the last meeting.               | Text |
-| A statement on any action points not achieved since the last meeting.  | Text |
+| What action points were agreed for the next meeting.                   | Complete the product for testing |
+| What action points were achieved since the last meeting.               | Improved the walkthroughs, was also able to have a chat with stakeholders to add new features such as more walkthroughs, better icons, and to add the descriptions that they had provided for these walkthroughs. |
+| A statement on any action points not achieved since the last meeting.  | All was done that was expected |
 
 ### Week 10 (21st September 2021 - Tuesday 10am)
 | Questions      | Answers |
 | ----------- | ----------- |
-| What action points were agreed for the next meeting.                   | Text |
-| What action points were achieved since the last meeting.               | Text |
-| A statement on any action points not achieved since the last meeting.  | Text |
+| What action points were agreed for the next meeting.                   | Improving the application according to the feedback given. All was very possible to achieve |
+| What action points were achieved since the last meeting.               | Usability testing was done |
+| A statement on any action points not achieved since the last meeting.  | All was done that was expected |
 
 ### Week 11 (28th September 2021 - Tuesday 10am)
 | Questions      | Answers |
 | ----------- | ----------- |
-| What action points were agreed for the next meeting.                   | Text |
-| What action points were achieved since the last meeting.               | Text |
-| A statement on any action points not achieved since the last meeting.  | Text |
+| What action points were agreed for the next meeting.                   | Finishing the report |
+| What action points were achieved since the last meeting.               | More usability testing was done. Application was improved as required |
+| A statement on any action points not achieved since the last meeting.  | Nothing, application is being improved, usability testing has all been done, all there is to do now is to finish the report. |
 
