@@ -67,29 +67,29 @@
 ### Week 1 (6th July 2021 - Tuesday 10am)
 | Questions      | Answers |
 | ----------- | ----------- |
-| What action points were agreed for the next meeting.                   | Text |
-| What action points were achieved since the last meeting.               | Text |
-| A statement on any action points not achieved since the last meeting.  | Text |
+| What action points were agreed for the next meeting.                   | Getting more feedback was the next step. We have another meeting with the stakeholder, and hopefully from there we can refine our model even more. |
+| What action points were achieved since the last meeting.               | Had gotten feedback on the preliminary report and where we need to go from here. Had also worked on the ethics approval but it was still not sorted. |
+| A statement on any action points not achieved since the last meeting.  | Nothing. Was the holidays before this.  |
 
 ### Week 2 (13th July 2021 - Tuesday 10am)
 | Questions      | Answers |
 | ----------- | ----------- |
-| What action points were agreed for the next meeting.                   | Text |
-| What action points were achieved since the last meeting.               | Text |
-| A statement on any action points not achieved since the last meeting.  | Text |
+| What action points were agreed for the next meeting.                   | We had refined our model a lot by reducing some of the requirements and really just focussing on what was important to achieve. |
+| What action points were achieved since the last meeting.               | We had gotten more feedback from stakeholders |
+| A statement on any action points not achieved since the last meeting.  | Nothing, ethics approval is still ongoing. |
 
 ### Week 3 (20th July 2021 - Tuesday 10am)
 | Questions      | Answers |
 | ----------- | ----------- |
-| What action points were agreed for the next meeting.                   | Text |
-| What action points were achieved since the last meeting.               | Text |
-| A statement on any action points not achieved since the last meeting.  | Text |
+| What action points were agreed for the next meeting.                   | Just to get started on report writing, and to continue with the application. Also to refine the usability evaluation plan for when it does get approved. |
+| What action points were achieved since the last meeting.               | we had refined our model and reduced  |
+| A statement on any action points not achieved since the last meeting.  | Nothing, we are on track. Other university courses are heavy so focussing more on them for the time being. |
 
 ### Week 4 (27th July 2021 - Tuesday 10am)
 | Questions      | Answers |
 | ----------- | ----------- |
 | What action points were agreed for the next meeting.                   | Text |
-| What action points were achieved since the last meeting.               | Text |
+| What action points were achieved since the last meeting.               | Had improved on the application further, had also gotten rid of the Notes tab, as was suggested by stakeholders to simplify the application |
 | A statement on any action points not achieved since the last meeting.  | Text |
 
 ### Week 5 (10th August 2021 - Tuesday 10am)
@@ -112,7 +112,7 @@
 | Questions      | Answers |
 | ----------- | ----------- |
 | What action points were agreed for the next meeting.                   | Text |
-| What action points were achieved since the last meeting.               | Text |
+| What action points were achieved since the last meeting.               | After months of refinement, ethics was finally approved. We can now do usability evaluations. |
 | A statement on any action points not achieved since the last meeting.  | Text |
 
 ### Week 8 (7th September 2021 - Tuesday 10am)
