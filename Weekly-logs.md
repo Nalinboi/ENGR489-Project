@@ -25,43 +25,43 @@
 | ----------- | ----------- |
 | What action points were agreed for the next meeting.                   | Finished the proposal of the project. |
 | What action points were achieved since the last meeting.               | Finished the proposal |
-| A statement on any action points not achieved since the last meeting.  | Fill in the ethics approval application  |
+| A statement on any action points not achieved since the last meeting.  | Fill in the ethics approval application and create wireframes of the application |
 
 ## Mid Trimester break 
 ### Week 6 (21th April 2021 - Wednesday 12pm)
 | Questions      | Answers |
 | ----------- | ----------- |
-| What action points were agreed for the next meeting.                   | Text |
-| What action points were achieved since the last meeting.               | Text |
-| A statement on any action points not achieved since the last meeting.  | Text |
+| What action points were agreed for the next meeting.                   | Get a basic application working on SwiftUI on XCode using Mac Mini in HCI room |
+| What action points were achieved since the last meeting.               | Had successfully created wireframes after re evaluation of the design. |
+| A statement on any action points not achieved since the last meeting.  | Ethics approval was rejected, still need to refine it |
 
 ### Week 7 (4th May 2021 - Wednesday 12pm)
 | Questions      | Answers |
 | ----------- | ----------- |
-| What action points were agreed for the next meeting.                   | Text |
-| What action points were achieved since the last meeting.               | Text |
-| A statement on any action points not achieved since the last meeting.  | Text |
+| What action points were agreed for the next meeting.                   | We now want to start the preliminary report. |
+| What action points were achieved since the last meeting.               | Had done a few tutorials for XCode and understood it a bit better, but not enough to make a start on the application. |
+| A statement on any action points not achieved since the last meeting.  | Still have not refined ethics approval. |
 
 ### Week 9 (12th May 2021 - Wednesday 12pm)
 | Questions      | Answers |
 | ----------- | ----------- |
-| What action points were agreed for the next meeting.                   | Text |
-| What action points were achieved since the last meeting.               | Text |
-| A statement on any action points not achieved since the last meeting.  | Text |
+| What action points were agreed for the next meeting.                   | Still to work on the application and do the preliminary report. Need to finish that by the 25th of may|
+| What action points were achieved since the last meeting.               | Had now started the preliminary report, more foccussed at that at the moment |
+| A statement on any action points not achieved since the last meeting.  | Not quite at the place we wanted to be with the application, ideally we wanted to start the evaluations for the appilcation now, however we are no where near that stage as of yet. |
 
 ### Week 10 (26th May 2021 - Wednesday 12pm)
 | Questions      | Answers |
 | ----------- | ----------- |
-| What action points were agreed for the next meeting.                   | Text |
-| What action points were achieved since the last meeting.               | Text |
-| A statement on any action points not achieved since the last meeting.  | Text |
+| What action points were agreed for the next meeting.                   | Continue on the application |
+| What action points were achieved since the last meeting.               | Had also gotten a proper tabbed application working on XCode  |
+| A statement on any action points not achieved since the last meeting.  | Apart from being further with the application we are going well. It was a shame I could not show a proper application on the preliiminary report. |
 
 ### Week 11 (2nd June 2021 - Wednesday 12pm)
 | Questions      | Answers |
 | ----------- | ----------- |
-| What action points were agreed for the next meeting.                   | Text |
-| What action points were achieved since the last meeting.               | Text |
-| A statement on any action points not achieved since the last meeting.  | Text |
+| What action points were agreed for the next meeting.                   | It's our final meeting before the break, had agreed on having a relaxed time away to avoid burnout. One simple task however was to get the ethics approval sorted out. |
+| What action points were achieved since the last meeting.               | Had gotten further with the application, getting it closer to the wireframes created. |
+| A statement on any action points not achieved since the last meeting.  | Nothing. |
 
 # Trimester 2
 ### Week 1 (6th July 2021 - Tuesday 10am)
